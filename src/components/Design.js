@@ -1,110 +1,176 @@
-import React from 'react';
-import figma from '@/components/img/figma.png'
-import zepline from '@/components/img/zepline.png'
-import invision from '@/components/img/Invision.png'
-import photoshap from '@/components/img/Photoshop.png'
-import adobe from '@/components/img/Illustrator.png';
+"use client";
+import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiCheckCircle, FiPhone, FiMail } from 'react-icons/fi';
 import Image from 'next/image';
+
 const Design = () => {
+    const designItems = ["Logo Design", "Brand Identity", "UI/UX Design", "Graphic Design"];
+    const devItems = ["Social Media", "Print Design", "Packaging", "Illustration"];
 
-
-  return (
-    <section className="design  graphics bg">
-      <div className="container relative m-auto">
-        <div className="grid md:grid-cols-2 grid-cols-1 items-start gap-8">
-
-          {/* Left Image Circle (optional) */}
-          <div className="relative hidden md:block">
-            {/* <div className="rounded-full overflow-hidden w-[350px] h-[350px] mx-auto bg-gray-100"></div> */}
-          </div>
-
-          {/* Content */}
-          <div>
-            <h1 className="text-[#FF3B76] md:text-6xl text-3xl font-bold">
-              GRAPHIC DESIGNS
-            </h1>
-
-            <p className="text-gray-500 text-lg mt-6 text-left">
-              SUBTITLE GOES HERE
-
-
-            </p>
-
-            <div className="md:flex justify-between mt-6">
-
-              {/* Left List */}
-              <ul className="text-gray-700 space-y-4">
-                <li className="flex items-center gap-2 text-[16px]">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
-                    viewBox="0 0 496 512" className="text-[#ff3b71]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z">
-                    </path></svg>UI/UX & Graphics Design
-                </li>
-                <li className="flex items-center gap-2 text-[16px]">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
-                    viewBox="0 0 496 512" className="text-[#ff3b71]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z">
-                    </path></svg>Mobile App Development
-                </li>
-                <li className="flex items-center gap-2 text-[16px]">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
-                    viewBox="0 0 496 512" className="text-[#ff3b71]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z">
-                    </path></svg>Game Development
-                </li>
-
-
-
-              </ul>
-
-              {/* Right List */}
-              <ul className="text-gray-700 space-y-4 mt-4 md:mt-0">
-                <li className="flex items-center gap-2 text-[16px]">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
-                    viewBox="0 0 496 512" className="text-[#ff3b71]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z">
-                    </path></svg>Web Development
-                </li>
-
-                <li className="flex items-center gap-2 text-[16px]">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
-                    viewBox="0 0 496 512" className="text-[#ff3b71]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z">
-                    </path></svg>DevOps Solutions
-                </li>
-                <li className="flex items-center gap-2 text-[16px]">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0"
-                    viewBox="0 0 496 512" className="text-[#ff3b71]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z">
-                    </path></svg>Volutpat odio non vehicula semper.
-                </li>
-              </ul>
+    return (
+        <section className="py-16 md:py-24 bg-white relative z-10 px-6 font-roboto">
+            {/* Background Decorative Elements */}
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <div className="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] rounded-full bg-pink-50/50 blur-[120px]" />
+                <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-orange-50/50 blur-[120px]" />
             </div>
 
-            {/* Button */}
-            {/* <div className="mt-8">
-              <a
-                href="#"
-                className="bg-[#FF3B76] text-white px-6 py-2 rounded-md inline-block"
-              >
-                View All
-              </a>
-            </div> */}
+            <div className="container mx-auto relative z-10">
+                <div className="flex flex-col md:flex-row items-center gap-16">
 
-            {/* Contact Box */}
-            <div className="relative before-bg-pink mt-12 w-auto  text-white p-7 "><div className="md:flex justify-center items-center  gap-3 text-sm  relative z-50"><a href="https://webstepsolutions.com/" className="flex items-center gap-2 text-white"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path></svg> https://webstepsolutions.com/</a><a href="mailto:info@webstepsolutions.com" className="flex items-center gap-2 text-white"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg> info@webstepsolutions.com</a><span className="flex items-center gap-2 text-white"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg> 97818-90033</span></div></div>
-            <div className="absolute md:top-0 -top-6 right-0 flex gap-3 "><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 320 512" className="cursor-pointer bg-black rounded-full md:h-10 md:w-10 h-6 w-6 text-white md:p-2 p-1 hover:text-pink-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 576 512" className="cursor-pointer bg-black rounded-full md:h-10 md:w-10 h-6 w-6 text-white md:p-2 p-1 hover:text-pink-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="cursor-pointer bg-black rounded-full md:h-10 md:w-10 h-6 w-6 text-white md:p-2 p-1 hover:text-pink-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+                    {/* Left Decorative Side */}
+                    <div className="w-full md:w-1/2 relative hidden md:flex justify-center items-center">
+                        <div className="relative w-80 h-80 lg:w-96 lg:h-96 flex items-center justify-center">
+
+                            {/* Sparkles */}
+                            {[
+                                { top: "10%", left: "20%", delay: "0s" },
+                                { top: "70%", left: "80%", delay: "1.2s" },
+                                { top: "30%", left: "85%", delay: "2.4s" },
+                                { top: "80%", left: "15%", delay: "0.8s" },
+                            ].map((s, i) => (
+                                <div key={i} className="absolute w-1 h-1 rounded-full bg-slate-300 animate-ping opacity-0"
+                                    style={{ top: s.top, left: s.left, animationDelay: s.delay, animationDuration: "4s" }} />
+                            ))}
+
+                            {/* Ambient Glows */}
+                            <div className="absolute top-0 right-0 w-56 h-56 bg-pink-500/10 rounded-full blur-[80px] animate-pulse" />
+                            <div className="absolute bottom-0 left-0 w-56 h-56 bg-orange-500/10 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: "1s" }} />
+
+                            {/* Orbit Ring 1 */}
+                            <div className="absolute w-80 h-80 rounded-full border border-dashed border-slate-200 animate-spin" style={{ animationDuration: "18s" }}>
+                                <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 shadow-[0_0_12px_rgba(236,72,153,0.3)]" />
+                            </div>
+
+                            {/* Orbit Ring 2 */}
+                            <div className="absolute w-64 h-64 rounded-full border border-dashed border-pink-500/5" style={{ animation: "spin 12s linear infinite reverse" }}>
+                                <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-gradient-to-br from-orange-500 to-pink-500 shadow-[0_0_12px_rgba(249,115,22,0.3)]" />
+                            </div>
+
+                            {/* Floating Cards */}
+                            {[
+                                { label: "UI / UX Design", cls: "top-4 -left-8", color: "#ec4899", anim: "float1", shadow: "rgba(236,72,153,0.2)" },
+                                { label: "Mobile Apps", cls: "bottom-10 -left-10", color: "#a855f7", anim: "float2", shadow: "rgba(168,85,247,0.2)" },
+                                { label: "Web Dev", cls: "top-8 -right-6", color: "#f97316", anim: "float3", shadow: "rgba(249,115,22,0.2)" },
+                                { label: "DevOps", cls: "bottom-6 -right-4", color: "#22d3ee", anim: "float4", shadow: "rgba(34,211,238,0.2)" },
+                            ].map((c, i) => (
+                                <div key={i} className={`absolute ${c.cls} flex items-center gap-2 bg-white border border-slate-100 rounded-2xl px-4 py-3 text-slate-700 text-[11px] font-bold tracking-wider whitespace-nowrap shadow-xl hover:scale-105 hover:border-pink-500/20 transition-transform duration-300 z-20`}
+                                    style={{ animation: `${c.anim} ${3.8 + i * 0.4}s ease-in-out infinite` }}>
+                                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: c.color, boxShadow: `0 0 8px ${c.shadow}` }} />
+                                    {c.label}
+                                </div>
+                            ))}
+
+                            {/* Center Glass Card */}
+                            <div className="relative w-48 h-48 bg-white rounded-[2.5rem] border border-slate-100 shadow-2xl flex flex-col items-center justify-center gap-3 group hover:border-pink-500/30 transition-all duration-500 cursor-default z-10">
+
+                                {/* Dot grid */}
+                                <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden pointer-events-none opacity-5"
+                                    style={{ backgroundImage: "radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)", backgroundSize: "22px 22px" }} />
+
+                                {/* Gradient overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-orange-500/5 rounded-[2.5rem] pointer-events-none" />
+
+                                {/* Pencil Icon */}
+                                <div className="relative w-14 h-14 flex items-center justify-center">
+                                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-pink-500/5 to-orange-500/5 border border-pink-500/10" />
+                                    <svg className="relative z-10" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="url(#g1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                                        style={{ animation: "wiggle 3s ease-in-out infinite" }}>
+                                        <defs>
+                                            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                                                <stop offset="0%" stopColor="#ec4899" /><stop offset="100%" stopColor="#f97316" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+                                    </svg>
+                                </div>
+
+                                {/* Label */}
+                                <span className="font-roboto font-black text-xl tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-orange-500"
+                                    style={{ animation: "labelPulse 3s ease-in-out infinite" }}>
+                                    DESIGN
+                                </span>
+
+                                {/* Color Swatches */}
+                                <div className="flex gap-1.5 mt-1">
+                                    {["#ec4899", "#f97316", "#a855f7", "#22d3ee", "#eab308"].map((c, i) => (
+                                        <div key={i} className="w-4 h-4 rounded-full border border-slate-100 hover:scale-125 transition-transform duration-200 cursor-pointer" style={{ background: c }} />
+                                    ))}
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {/* Keyframes */}
+                        <style>{`
+              @keyframes float1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+              @keyframes float2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+              @keyframes float3 { 0%,100%{transform:translateY(-5px)} 50%{transform:translateY(6px)} }
+              @keyframes float4 { 0%,100%{transform:translateY(4px)} 50%{transform:translateY(-8px)} }
+              @keyframes wiggle  { 0%,100%{transform:rotate(-6deg)} 50%{transform:rotate(6deg)} }
+              @keyframes labelPulse { 0%,100%{opacity:1} 50%{opacity:0.75} }
+            `}</style>
+                    </div>
+
+                    {/* Right Content */}
+                    <div className="w-full md:w-1/2 space-y-8 relative z-10">
+                        <div>
+                            <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest uppercase mb-6 shadow-sm">Creative Solutions</span>
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+                                GRAPHIC DESIGNS
+                            </h1>
+                            <p className="text-slate-600 text-lg mt-6 leading-relaxed max-w-lg">
+                                We craft beautiful, engaging, and highly functional designs that elevate your brand and provide seamless user experiences across all devices.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
+                            <ul className="space-y-5">
+                                {designItems.map((item, idx) => (
+                                    <li key={idx} className="flex items-center gap-4 text-slate-700 font-medium group">
+                                        <div className="bg-slate-50 p-2 rounded-full border border-slate-100 group-hover:border-pink-500/50 group-hover:bg-pink-50 transition-all duration-300">
+                                            <FiCheckCircle className="text-pink-500 text-lg flex-shrink-0" />
+                                        </div>
+                                        <span className="group-hover:text-pink-600 transition-colors">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <ul className="space-y-5">
+                                {devItems.map((item, idx) => (
+                                    <li key={idx} className="flex items-center gap-4 text-slate-700 font-medium group">
+                                        <div className="bg-slate-50 p-2 rounded-full border border-slate-100 group-hover:border-orange-500/50 group-hover:bg-orange-50 transition-all duration-300">
+                                            <FiCheckCircle className="text-orange-500 text-lg flex-shrink-0" />
+                                        </div>
+                                        <span className="group-hover:text-orange-600 transition-colors">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Contact Box */}
+                        <div className="mt-12 bg-white border border-slate-100 text-slate-900 rounded-3xl p-8 shadow-2xl w-full sm:w-auto inline-block hover:border-pink-500/10 transition-colors duration-300 relative overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-orange-500/5 pointer-events-none"></div>
+                            <div className="flex flex-col sm:flex-row items-center gap-8 text-sm font-bold tracking-wide relative z-10">
+                                <a href="https://webstepsolutions.com/" className="flex items-center gap-3 hover:text-pink-600 transition-colors group">
+                                    <span className="bg-slate-50 border border-slate-100 p-2.5 rounded-xl group-hover:scale-110 transition-transform"><FiCheckCircle className="text-pink-500" /></span>
+                                    webstepsolutions.com
+                                </a>
+                                <a href="mailto:info@webstepsolutions.com" className="flex items-center gap-3 hover:text-orange-600 transition-colors group">
+                                    <span className="bg-slate-50 border border-slate-100 p-2.5 rounded-xl group-hover:scale-110 transition-transform"><FiMail className="text-orange-500" /></span>
+                                    info@webstepsolutions.com
+                                </a>
+                                <span className="flex items-center gap-3 group cursor-default text-slate-700">
+                                    <span className="bg-slate-50 border border-slate-100 p-2.5 rounded-xl group-hover:scale-110 transition-transform"><FiPhone className="text-pink-500" /></span>
+                                    +91 97818-90033
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
 }
 
-export default Design;
+export default Design

@@ -1,26 +1,53 @@
-import React from 'react'
-import node from "@/components/img/node-js.png"
+import React from 'react';
+import node from "@/components/img/node.png";
 import Image from 'next/image';
+import AnimatedSection from '../AnimatedSection';
 
 const NodeBanner = () => {
   return (
-    <>
-    <section className="services">
-    <div className="col-full">
-        <div className="devider">
-            <div className="col-60">
-                <h2 className="Mobile">Node.js Development Company</h2>
-                <p>eBizneeds, a leading Node.js development company, stands out as a trusted IT partner, boasting a team of skilled developers recognized for delivering cutting-edge, scalable, and feature-rich web and mobile app solutions. With a strong focus on user-centric front-end designs and lightning-fast back-end development, we ensure seamless user experiences. Our expertise lies in deve
-
-                </p></div>
-            <div className="col-40">
-                <Image src={node} alt=""/>
+    <section className="py-16 md:py-24 bg-white relative z-10 px-6 overflow-hidden font-roboto">
+      {/* Decorative background glows */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-50 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+      
+      <div className="container mx-auto max-w-7xl relative z-10">
+        <AnimatedSection delay={0.1} direction="up">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:w-3/5">
+              <div className="mb-10 text-center lg:text-left">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-green-600 font-bold text-[10px] tracking-widest uppercase mb-6 shadow-sm">
+                  High-Performance Backend
+                </span>
+                <h1 className="text-4xl md:text-6xl font-black leading-tight text-slate-900 mb-8 tracking-tight uppercase">
+                  Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">Node.js Development</span> Services
+                </h1>
+                <p className="text-slate-500 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+                  Build scalable and high-performance applications with our Node.js experts. We focus on speed, security, and real-time capabilities for your digital products.
+                </p>
+                <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <button className="px-8 py-4 bg-slate-900 text-white rounded-2xl text-[11px] font-black uppercase tracking-[0.2em] shadow-lg shadow-slate-900/20 hover:bg-green-600 hover:-translate-y-1 transition-all duration-300">
+                        Discuss Your Project
+                    </button>
                 </div>
+              </div>
             </div>
-        </div>
-</section>
-    </>
-  )
-}
 
-export default NodeBanner
+            {/* Right Image */}
+            <div className="lg:w-2/5 flex justify-center">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <div className="relative p-8 bg-slate-50 rounded-[3rem] border border-slate-100 shadow-2xl transform group-hover:-translate-y-2 transition-all duration-500">
+                  <Image src={node} alt="Node.js Development" className="w-full h-auto max-w-[300px]" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+  );
+};
+
+export default NodeBanner;

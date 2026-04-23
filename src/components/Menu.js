@@ -1,64 +1,93 @@
+"use client";
 import React, { useState } from 'react';
 import SubMenus from './SubMenus';
 import Link from 'next/link';
-import { FaArrowDown } from 'react-icons/fa6';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaAngleDown } from 'react-icons/fa';
-const Menu = () => {
-    const [toggleMenu, setToggleMenu] = useState(false);
 
-    const handleToggleMenu = () => {
-        setToggleMenu(!toggleMenu);
-    };
+const Menu = ({ mobile = false, closeMenu }) => {
+    const [activeSubmenu, setActiveSubmenu] = useState(false);
+
+    const navLinks = [
+        { name: "Home", href: "/" },
+        { name: "Services", href: "#", hasSubmenu: true },
+        { name: "Work", href: "/works" },
+        { name: "About", href: "/about" },
+        { name: "Blog", href: "/blog" },
+        { name: "Contact", href: "/contactus" },
+    ];
+
+    const linkClasses = mobile 
+        ? "flex items-center justify-between w-full py-4 text-slate-600 hover:text-pink-600 font-semibold text-lg border-b border-slate-100 transition-colors"
+        : "px-5 py-2.5 text-slate-500 hover:text-slate-900 font-bold text-[11px] tracking-[0.12em] uppercase transition-all relative group";
 
     return (
-        <>
-        <div className='menu md:flex absolute md:static top-16 left-0 z-50 justify-center w-full md:w-auto bg-black md:bg-transparent p-5 md:p-0 transition-all hidden'> 
-            <div className="navigation-bar">
-                <ul className='md:flex gap-10 relative'>
-                    <li>
-                        <Link href="/">home</Link>
-                    </li>
-                    <li onClick={handleToggleMenu}>
-                        <Link href="/services">services</Link> <FaAngleDown className='text-[#fff] inline-block ml-1' />
-                        {toggleMenu && (
-                            <>
-                                <div className="onlymobile">
-                                    <SubMenus />
-                                </div>
-                               
-                            </>
+        <nav className={`w-full ${mobile ? "block" : "flex items-center justify-center font-roboto"}`}>
+            <ul className={`${mobile ? "flex flex-col" : "flex items-center gap-1"}`}>
+                {navLinks.map((link, idx) => (
+                    <li key={idx} className={mobile ? "w-full" : "relative group"}>
+                        {link.hasSubmenu ? (
+                            <div 
+                                className="relative"
+                                onMouseEnter={!mobile ? () => setActiveSubmenu(true) : undefined}
+                                onMouseLeave={!mobile ? () => setActiveSubmenu(false) : undefined}
+                            >
+                                <button 
+                                    onClick={mobile ? () => setActiveSubmenu(!activeSubmenu) : undefined}
+                                    className={`${linkClasses} flex items-center gap-1 focus:outline-none`}
+                                >
+                                    <span>{link.name}</span>
+                                    <FaAngleDown className={`text-[10px] transition-transform duration-300 ${activeSubmenu ? "rotate-180 text-pink-500" : "opacity-40"}`} />
+                                    
+                                    {!mobile && (
+                                        <motion.div 
+                                            className="absolute bottom-1 left-5 right-5 h-px bg-gradient-to-r from-pink-500 to-orange-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                                        />
+                                    )}
+                                </button>
+                                
+                                <AnimatePresence>
+                                    {activeSubmenu && (
+                                        <motion.div 
+                                            initial={{ opacity: 0, y: mobile ? 0 : 10, height: mobile ? 0 : 'auto' }}
+                                            animate={{ opacity: 1, y: 0, height: 'auto' }}
+                                            exit={{ opacity: 0, y: mobile ? 0 : 10, height: mobile ? 0 : 0 }}
+                                            transition={{ duration: 0.3, ease: "easeOut" }}
+                                            className={`${
+                                                mobile 
+                                                ? "bg-slate-50 rounded-2xl overflow-hidden" 
+                                                : "absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white backdrop-blur-2xl rounded-3xl shadow-2xl border border-slate-100 z-[100] overflow-hidden min-w-[200px]"
+                                            }`}
+                                        >
+                                            <SubMenus mobile={mobile} closeMenu={() => {
+                                                setActiveSubmenu(false);
+                                                if (mobile && closeMenu) closeMenu();
+                                            }} />
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        ) : (
+                            <Link 
+                                href={link.href} 
+                                className={linkClasses}
+                                onClick={mobile ? closeMenu : undefined}
+                            >
+                                {link.name}
+                                {!mobile && (
+                                    <motion.div 
+                                        className="absolute bottom-1 left-5 right-5 h-px bg-gradient-to-r from-pink-500 to-orange-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                                    />
+                                )}
+                            </Link>
                         )}
-                        <div className="onlyDesktop">
-                        <SubMenus />
-                    </div>
                     </li>
-                  
-                    <li>
-                        <Link href="/projects">projects</Link>
-                    </li>
-                    <li>
-                        <Link href="/works">our work</Link>
-                    </li>
-                    <li>
-                        <Link href="/blog">blog</Link>
-                    </li>
-                    {/* <li>
-                        <Link href="/packages">packages</Link>
-                    </li> */}
-                    {/* <li>
-                    <Link href="/blogv1">blogv1</Link>
-                </li> */}
-                    <li>
-                        <Link href="/team">team</Link>
-                    </li>
-                    <li>
-                        <Link href="/contactus">contact us</Link>
-                    </li>
-                </ul>
-            </div>
-            </div>
-        </>
+                ))}
+            </ul>
+        </nav>
     );
 };
 
 export default Menu;
+
+

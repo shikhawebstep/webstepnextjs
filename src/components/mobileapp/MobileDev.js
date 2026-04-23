@@ -1,25 +1,56 @@
-import React from 'react'
-import ExpertsForm from '../ExpertsForm'
+import React from 'react';
+import ExpertsForm from '../ExpertsForm';
+import AnimatedSection from '../AnimatedSection';
+
 const MobileDev = () => {
   return (
-    <>
-    <section className="Software">
-    <div className="col-full">
-        <div className="devider">
-            <div className="col-60">
-                <div className="Experienced">
-                    <h4>Build Innovative Mobile App At Our Mobile App Development Company </h4>
-                   <p>At eBizneeds, our experts focus on providing the standard mobile app for any platform. As a mobile app development company, we deal with start-ups and established businesses to develop robust and reliable mobile apps from innovative ideas. We focus on offering customized mobile app development solution that aids to get new business opportunities. eBizneeds ranks on top in terms of delivering the best app development services. Our cross-platform and provide the best user experience by providing client-centric services. We provide the entire cycle of app design, integration, and management solutions. We deliver customized web and mobile app development solutions that provide digital experiences on mobile and web devices. We provide a full cycle of app design, integration, and management solution. Whether a consumer-oriented application or dynamic enterprise-className services, the business leads the entire mobile app development procedure from ideation to delivery and ongoing support.</p>
-                </div>
-            </div>
-            <div className="col-40">
-            <ExpertsForm/>
-            </div>
-        </div>
-    </div>
-</section>
-    </>
-  )
-}
+    <section className="py-16 md:py-24 bg-slate-50 relative z-10 px-6 overflow-hidden font-roboto">
+      
+      {/* Subtle background glow */}
+      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-blue-100/40 rounded-full blur-[100px] -translate-x-1/2 pointer-events-none"></div>
 
-export default MobileDev
+      <div className="container mx-auto max-w-7xl relative z-10">
+        <AnimatedSection delay={0.1} direction="up">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:w-3/5">
+              <div className="mb-10">
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-blue-500 font-bold mb-6 block">
+                  Next-Gen Mobile Solutions
+                </span>
+                <h2 className="text-4xl md:text-5xl font-black leading-tight text-slate-900 mb-8 tracking-tight uppercase">
+                  Hybrid & Native <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">Mobile App</span> Development
+                </h2>
+                <div className="space-y-6 text-slate-500 text-lg leading-relaxed">
+                    <p>
+                      In today's mobile-centric world, having a robust mobile presence is crucial. We specialize in building applications that work flawlessly across all devices, ensuring your brand is always at your customers' fingertips.
+                    </p>
+                    <p>
+                      Whether you need a high-performance native iOS or Android app, or a cost-effective cross-platform solution using Flutter or React Native, our developers have the expertise to bring your vision to life.
+                    </p>
+                    <p>
+                      We focus on creating intuitive user interfaces, fast loading times, and seamless integrations with backend services to provide a truly exceptional mobile experience.
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Form */}
+            <div className="lg:w-2/5 w-full">
+              <div className="bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 z-0 pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <div className="relative z-10">
+                  <ExpertsForm />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+  );
+};
+
+export default MobileDev;

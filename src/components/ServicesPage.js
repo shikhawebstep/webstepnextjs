@@ -1,102 +1,110 @@
 import React from 'react';
-
-import img from '@/components/img/softwaredev.png'
-import img2 from '@/components/img/ui-ux.webp'
-import img3 from '@/components/img/fullstack.png'
-import img4 from '@/components/img/laravel-featured.webp'
-import img5 from '@/components/img/wpdev.png'
-import img6 from '@/components/img/nodejs.png'
-import img7 from '@/components/img/php-dev.png'
-import imgfirt from '@/components/img/mobiledev.png'
-import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
-import Image from 'next/image';
+import { FiSmartphone, FiLayout, FiServer, FiCheckCircle } from 'react-icons/fi';
+import { FaLaravel, FaNodeJs, FaPhp, FaWordpress, FaArrowRight } from 'react-icons/fa';
+
 const ServicesPage = () => {
-  
   const servicesData = [
     {
       id: 1,
-      imgSrc: imgfirt,
+      icon: <FiSmartphone className="text-3xl text-pink-500 group-hover:text-white transition-colors duration-300" />,
       title: 'Mobile App Development',
-      description: 'A brand is your company’s personality and promise to your customer. that help create a feeling',
+      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
       href: '/mobileApp'
     },
     {
       id: 2,
-      imgSrc: img2,
+      icon: <FiLayout className="text-3xl text-orange-400 group-hover:text-white transition-colors duration-300" />,
       title: 'UI/UX Designing',
-      description: 'A brand is your company’s personality and promise to your customer. that help create a feeling',
+      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
       href: '/uiux'
     },
     {
       id: 3,
-      imgSrc: img3,
+      icon: <FiServer className="text-3xl text-pink-500 group-hover:text-white transition-colors duration-300" />,
       title: 'Full Stack Development',
-      description: 'A brand is your company’s personality and promise to your customer. that help create a feeling',
+      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
       href: '/fullstack'
     },
     {
       id: 4,
-      imgSrc: img,
+      icon: <FiCheckCircle className="text-3xl text-orange-400 group-hover:text-white transition-colors duration-300" />,
       title: 'Software Testing',
-      description: 'A brand is your company’s personality and promise to your customer. that help create a feeling',
+      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
       href: '/softwaretesting'
     },
     {
       id: 5,
-      imgSrc: img4,
+      icon: <FaLaravel className="text-3xl text-pink-500 group-hover:text-white transition-colors duration-300" />,
       title: 'Laravel Development',
-      description: 'A brand is your company’s personality and promise to your customer. that help create a feeling',
+      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
       href: '/laravel'
     },
     {
       id: 6,
-      imgSrc: img6,
+      icon: <FaNodeJs className="text-3xl text-orange-400 group-hover:text-white transition-colors duration-300" />,
       title: 'Node.js Development',
-      description: 'A brand is your company’s personality and promise to your customer. that help create a feeling',
+      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
       href: '/nodejs'
     },
     {
       id: 7,
-      imgSrc: img7,
+      icon: <FaPhp className="text-3xl text-pink-500 group-hover:text-white transition-colors duration-300" />,
       title: 'PHP Development',
-      description: 'A brand is your company’s personality and promise to your customer. that help create a feeling',
+      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
       href: '/php'
     },
     {
       id: 8,
-      imgSrc: img5,
-      title: 'WordPress Website Development',
-      description: 'A brand is your company’s personality and promise to your customer. that help create a feeling',
+      icon: <FaWordpress className="text-3xl text-orange-400 group-hover:text-white transition-colors duration-300" />,
+      title: 'WordPress Website',
+      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
       href: '/wordpress'
     }
-    
   ];
 
   return (
-    <section className="Services-page">
-      <div className="col-full">
-      <div className="beforeline">
-        <h4 className='md:text-5xl text-3xl font-bold pb-16'>Services</h4>
+    <section className="py-16 md:py-24 bg-white relative z-10 px-6 font-roboto">
+      <div className="container mx-auto">
+        <div className="text-center mb-16 relative z-10">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest uppercase mb-4 shadow-sm">
+            What We Offer
+          </span>
+          <h4 className="text-4xl md:text-5xl font-black text-slate-900">Our Services</h4>
         </div>
-        <div className="grid md:grid-cols-4 grid-cols-1 gap-10">
+
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 relative z-10">
           {servicesData.map(service => (
-            <div className="border rounded-md p-5 pt-16 relative border-black" key={service.id}>
-              <div className="">
-              <div className="bg-[#e7efff] h-[80px] w-[80px] absolute -top-5 -left-5 rounded-full p-5">   <Image src={service.imgSrc} className='h-full w-full object-contain' alt="" /></div>
-             
-                <h6 className='font-bold text-2xl mb-3'>{service.title}</h6>
-                <span className='font-sm'>{service.description}</span>
-                <button className='bg-[#e7efff] p-2 px-5 flex justify-center gap-2 items-center rounded-3xl  mt-4'><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" className="text-[#ff3b71]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><Link href={service.href}>learn more</Link></button>
+            <div key={service.id} className="group relative bg-white border border-slate-100 rounded-3xl p-8 hover:border-pink-500/20 transition-all duration-500 shadow-xl hover:shadow-2xl flex flex-col items-start overflow-hidden hover:-translate-y-2">
+
+              {/* Subtle hover gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-orange-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+              <div className="w-16 h-16 flex-shrink-0 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-pink-600 group-hover:to-orange-500 group-hover:border-transparent transition-all duration-500 relative z-10 shadow-sm">
+                {service.icon}
               </div>
+              <h6 className="font-bold text-xl mb-4 text-slate-900 group-hover:text-pink-600 transition-colors duration-300 relative z-10">
+                {service.title}
+              </h6>
+              <p className="text-slate-500 text-sm leading-relaxed mb-6 relative z-10 flex-grow">
+                {service.description}
+              </p>
+              <Link href={service.href} className="inline-flex items-center mt-auto gap-2 text-[10px] tracking-[0.2em] font-bold uppercase text-slate-400 group-hover:text-pink-500 transition-colors duration-300 relative z-10">
+                Learn more <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           ))}
         </div>
-        <div className="text-center text-center flex justify-center items-center gap-2 mt-7 "> <Link href="/services" className='text-2xl font-semibold text-[#ff3b71]  flex justify-center items-center gap-2 '>View All Services <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" className="text-[#ff3b71]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path></svg></Link></div>
-    
+
+        <div className="text-center mt-16 relative z-10">
+          <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-pink-600 to-orange-500 text-white rounded-xl font-bold tracking-widest uppercase text-xs hover:shadow-lg hover:shadow-pink-600/20 hover:-translate-y-1 transition-all duration-300 group">
+            View All Services <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default ServicesPage;
+

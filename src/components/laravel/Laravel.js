@@ -1,16 +1,20 @@
-import React from 'react'
-import LaravelBanner from './LaravelBanner'
-import LaravelDev from './LaravelDev'
-import LaravelElevate from './LaravelElevate'
+import React from 'react';
+import LaravelBanner from './LaravelBanner';
+import LaravelDev from './LaravelDev';
+import LaravelElevate from './LaravelElevate';
+import BlogReview from '../Blog/BlogReview';
+import Customer from '../Customer';
 
 const Laravel = () => {
   return (
-    <>
-    <LaravelBanner/>
-    <LaravelDev/>
-    <LaravelElevate/>
-    </>
-  )
-}
+    <main className="bg-white">
+      <LaravelBanner />
+      <LaravelDev />
+      <LaravelElevate />
+      <BlogReview />
+      <Customer />
+    </main>
+  );
+};
 
-export default Laravel
+export default Laravel;

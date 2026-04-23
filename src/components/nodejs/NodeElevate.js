@@ -1,29 +1,65 @@
-import React from 'react'
-import node from "@/components/img/node.png"
+import React from 'react';
+import node from "@/components/img/node.png";
 import Image from 'next/image';
+import AnimatedSection from '../AnimatedSection';
+import { FaServer, FaCodeBranch, FaCheckDouble } from 'react-icons/fa';
 
 const NodeElevate = () => {
   return (
-    <>
-    <section className="Elevate">
-    <div className="col-full">
-        <div className="devider">
-            <div className="col-40">
-             <Image src={node} alt=""/>
-            </div>
-            <div className="col-60">
-                <div className="Experienced">
-                    <h4>Hire Node.js Developer From eBizneeds
-                    </h4>
-                   <p>Get high scalable web and mobile app solutions from professionally experienced Node.js developers and leverage them for your business. Node.js is a great technology for creating feature-rich, robust, and secure applications for mobile and web platforms. It facilitates businesses to offer the best service to their customers. So, hire node.js developers from eBizneeds and get a high-quality app for your business.
-                    </p>
-                   </div>
-            </div>       
-        </div>
-    </div>
-</section>
-    </>
-  )
-}
+    <section className="py-16 md:py-24 bg-white relative z-10 px-6 overflow-hidden font-roboto">
+      
+      {/* Background patterns */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#10b981 0.5px, transparent 0.5px)', backgroundSize: '32px 32px' }}></div>
 
-export default NodeElevate
+      <div className="container mx-auto max-w-7xl relative z-10">
+        <div className="bg-green-50 rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+          {/* Subtle glow */}
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/50 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+          
+          <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
+            <div className="lg:w-1/3 flex justify-center">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-white rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                <div className="relative bg-white p-6 rounded-3xl shadow-xl transform group-hover:scale-105 transition-transform duration-500">
+                  <Image src={node} alt="Professional Node.js Developers" className="w-full h-auto max-w-[200px]" />
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:w-2/3">
+              <AnimatedSection delay={0.1} direction="right">
+                <div className="mb-10">
+                    <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tight leading-tight">
+                        Hire Certified <span className="text-green-600">Node.js Developers</span>
+                    </h2>
+                    <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                        Our Node.js developers are experts in building robust backend systems that power high-traffic applications. We focus on scalability, efficiency, and modern best practices.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    {[
+                        { icon: <FaServer className="text-green-500" />, label: "Scalable APIs" },
+                        { icon: <FaCodeBranch className="text-emerald-500" />, label: "Microservices" },
+                        { icon: <FaCheckDouble className="text-green-500" />, label: "Unit Tested" }
+                    ].map((item, index) => (
+                        <div key={index} className="flex items-center gap-4 bg-white/60 p-4 rounded-2xl border border-white/80 shadow-sm">
+                            <div className="text-xl">{item.icon}</div>
+                            <span className="font-bold text-slate-800 text-xs uppercase tracking-wider">{item.label}</span>
+                        </div>
+                    ))}
+                </div>
+
+                <button className="mt-12 px-10 py-5 bg-slate-900 text-white rounded-2xl text-[11px] font-black uppercase tracking-[0.25em] shadow-2xl hover:bg-green-600 transition-all duration-300">
+                    Partner With Us
+                </button>
+              </AnimatedSection>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default NodeElevate;

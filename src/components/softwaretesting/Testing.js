@@ -1,12 +1,20 @@
-import React from 'react'
-import TestBanner from './TestBanner'
+import React from 'react';
+import TestBanner from './TestBanner';
+import TestDev from './TestDev';
+import TestElevate from './TestElevate';
+import BlogReview from '../Blog/BlogReview';
+import Customer from '../Customer';
 
 const Testing = () => {
   return (
-  <>
-  <TestBanner/>
-  </>
-  )
-}
+    <main className="bg-white">
+      <TestBanner />
+      <TestDev />
+      <TestElevate />
+      <BlogReview />
+      <Customer />
+    </main>
+  );
+};
 
-export default Testing
+export default Testing;
