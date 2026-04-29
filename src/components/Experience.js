@@ -19,12 +19,11 @@ const Experience = () => {
                         <AnimatedSection delay={0.1} direction="left">
                             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-900 text-white mb-8 shadow-2xl shadow-slate-900/20">
                                 <FiTrendingUp className="text-pink-500" />
-                                <span className="text-[9px] font-black uppercase tracking-[0.3em]">Proven Experience</span>
+                                <span className="text-[9px] font-black capitalize tracking-[0.3em]">Proven Experience</span>
                             </div>
 
-                            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight uppercase mb-8">
-                                Vast experience in
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-orange-500 to-amber-500">
+                            <h2 className="font-heading text-4xl md:text-5xl capitalize lg:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight  mb-8">
+                                experience in  <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-orange-500 to-amber-500">
                                     Enterprise Software
                                 </span>
                             </h2>
@@ -45,7 +44,7 @@ const Experience = () => {
                                 ].map((item, idx) => (
                                     <div key={idx} className="p-6 bg-slate-50 rounded-3xl border border-slate-100 group hover:border-pink-500/20 transition-colors">
                                         <span className="block font-heading text-3xl font-black text-slate-900 mb-1">{item.num}</span>
-                                        <span className="block text-[8px] font-black text-slate-400 uppercase tracking-widest">{item.label}</span>
+                                        <span className="block text-[8px] font-black text-slate-400 capitalize tracking-widest">{item.label}</span>
                                     </div>
                                 ))}
                             </div>
@@ -69,7 +68,7 @@ const Experience = () => {
                                 {/* Floating mini-badge */}
                                 <div className="absolute bottom-10 right-0 p-6 bg-slate-900 rounded-3xl shadow-2xl text-white transform rotate-6 hover:rotate-0 transition-transform cursor-default z-20">
                                     <span className="block font-black text-2xl leading-none mb-1 text-pink-500">20+</span>
-                                    <span className="block text-[7px] font-black uppercase tracking-[0.3em]">Years Active</span>
+                                    <span className="block text-[7px] font-black capitalize tracking-[0.3em]">Years Active</span>
                                 </div>
                             </div>
                         </AnimatedSection>

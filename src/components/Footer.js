@@ -2,19 +2,19 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { 
-    FaEnvelope, 
-    FaPhoneAlt, 
-    FaMapMarkerAlt, 
-    FaFacebookF, 
-    FaInstagram, 
-    FaLinkedinIn, 
-    FaTwitter, 
-    FaYoutube, 
-    FaArrowRight, 
-    FaRegCommentDots, 
+import {
+    FaEnvelope,
+    FaPhoneAlt,
+    FaMapMarkerAlt,
+    FaFacebookF,
+    FaInstagram,
+    FaLinkedinIn,
+    FaTwitter,
+    FaYoutube,
+    FaArrowRight,
+    FaRegCommentDots,
     FaPaperPlane,
-    FaChevronUp 
+    FaChevronUp
 } from 'react-icons/fa';
 import logo from "@/components/img/logo.png";
 
@@ -61,7 +61,7 @@ const Footer = () => {
                         { icon: <FaEnvelope size={18} />, href: "mailto:hello@webstepsolutions.com", label: "Email" },
                         { icon: <FaMapMarkerAlt size={18} />, href: "#", label: "Visit" }
                     ].map((item, idx) => (
-                        <a 
+                        <a
                             key={idx}
                             href={item.href}
                             className="flex flex-col items-center gap-1.5 p-3 text-slate-400 hover:text-pink-500 transition-colors"
@@ -77,26 +77,18 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
                     {/* Brand Section */}
                     <div className="space-y-8">
-                        <Link href="/" className="flex items-center gap-3.5 group">
-                            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-600 to-orange-500 flex items-center justify-center shadow-lg shadow-pink-600/20 group-hover:rotate-6 transition-all duration-500">
-                                <Image src={logo} alt="Logo" width={28} height={28} className="object-contain" />
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="font-roboto font-black text-2xl tracking-tight text-slate-900 leading-tight">
-                                    Webstep<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">Solutions</span>
-                                </span>
-                                <span className="font-mono text-[8px] tracking-[0.3em] uppercase text-slate-400 -mt-0.5">
-                                    Digital Agency
-                                </span>
-                            </div>
+                        <Link href="/" className="flex w-fit rounded-[10px] overflow-hidden items-center gap-3.5 shrink-0 group">
+
+                            <Image src={logo} alt="Logo" width={170} className="object-cover" />
+
                         </Link>
                         <p className="text-lg leading-relaxed text-slate-500 font-medium">
                             Empowering brands with cutting-edge digital solutions. We transform complex ideas into seamless digital experiences.
                         </p>
                         <div className="flex items-center gap-4">
                             {socialLinks.map((social, idx) => (
-                                <a 
-                                    key={idx} 
+                                <a
+                                    key={idx}
                                     href={social.href}
                                     aria-label={social.label}
                                     className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-600 hover:to-orange-500 hover:text-white hover:border-transparent transition-all duration-300 shadow-sm"
@@ -147,9 +139,9 @@ const Footer = () => {
                             <h4 className="text-slate-900 font-bold text-lg mb-6 uppercase tracking-[0.2em]">Newsletter</h4>
                             <p className="text-sm mb-6 text-slate-500 leading-relaxed font-medium">Subscribe to get the latest digital trends and updates delivered to your inbox.</p>
                             <div className="relative group">
-                                <input 
-                                    type="email" 
-                                    placeholder="your@email.com" 
+                                <input
+                                    type="email"
+                                    placeholder="your@email.com"
                                     className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-6 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-pink-500 transition-all"
                                 />
                                 <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-gradient-to-r from-pink-600 to-orange-500 flex items-center justify-center text-white shadow-lg shadow-pink-600/20 group-hover:scale-105 transition-all">
@@ -179,7 +171,7 @@ const Footer = () => {
                     <div className="flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
                         <Link href="/privacy" className="hover:text-slate-900 transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-slate-900 transition-colors">Terms of Service</Link>
-                        <button 
+                        <button
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                             className="flex items-center gap-2 group hover:text-slate-900 transition-colors"
                         >

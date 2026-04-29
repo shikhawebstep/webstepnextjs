@@ -86,7 +86,7 @@ const Process = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 text-[10px] font-bold tracking-[0.2em] text-pink-500 uppercase bg-white border border-slate-100 rounded-full shadow-sm"
+            className="inline-block px-4 py-1.5 mb-6 text-[10px] font-bold tracking-[0.2em] text-pink-500 capitalize bg-white border border-slate-100 rounded-full shadow-sm"
           >
             Our Methodology
           </motion.span>
@@ -196,7 +196,7 @@ const Process = () => {
                     <FaRocket className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-[9px] text-slate-400 uppercase tracking-[0.2em] font-bold">Success Rate</p>
+                    <p className="text-[9px] text-slate-400 capitalize tracking-[0.2em] font-bold">Success Rate</p>
                     <p className="text-xl font-black text-slate-900">99.9%</p>
                   </div>
                 </div>

@@ -71,7 +71,7 @@ const MarketingTeam = () => {
                 {/* Header */}
                 <div className="text-center mb-20">
                     <motion.span initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                        className="inline-block px-4 py-1.5 rounded-full bg-white border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest uppercase mb-5 shadow-sm">
+                        className="inline-block px-4 py-1.5 rounded-full bg-white border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest capitalize mb-5 shadow-sm">
                         Our Experts
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} viewport={{ once: true }}
@@ -125,7 +125,7 @@ const MarketingTeam = () => {
                                             <motion.div key={index}
                                                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}
                                                 transition={{ duration: 0.4 }}
-                                                className={`inline-block px-4 py-1.5 rounded-full bg-gradient-to-r ${member.accent} text-white text-[10px] font-black tracking-widest uppercase shadow-lg`}>
+                                                className={`inline-block px-4 py-1.5 rounded-full bg-gradient-to-r ${member.accent} text-white text-[10px] font-black tracking-widest capitalize shadow-lg`}>
                                                 {member.tag}
                                             </motion.div>
                                         </AnimatePresence>
@@ -164,13 +164,13 @@ const MarketingTeam = () => {
                                     >
                                         {/* Name + role */}
                                         <div>
-                                            <p className="text-[10px] font-black tracking-[0.25em] uppercase text-slate-400 mb-3">
+                                            <p className="text-[10px] font-black tracking-[0.25em] capitalize text-slate-400 mb-3">
                                                 #{String(index + 1).padStart(2, "0")} / {teamData.length}
                                             </p>
                                             <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-3">
                                                 {member.name}
                                             </h3>
-                                            <span className={`text-xs font-black tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r ${member.accent}`}>
+                                            <span className={`text-xs font-black tracking-[0.2em] capitalize text-transparent bg-clip-text bg-gradient-to-r ${member.accent}`}>
                                                 {member.role}
                                             </span>
                                         </div>
@@ -192,14 +192,14 @@ const MarketingTeam = () => {
                                             {member.stats.map((s, i) => (
                                                 <div key={i} className="bg-slate-50 border border-slate-100 rounded-2xl p-4 text-center hover:border-pink-500/20 hover:bg-white transition-all duration-300">
                                                     <p className={`text-2xl font-black text-transparent bg-clip-text bg-gradient-to-br ${member.accent}`}>{s.value}</p>
-                                                    <p className="text-[10px] text-slate-400 font-bold tracking-widest uppercase mt-1">{s.label}</p>
+                                                    <p className="text-[10px] text-slate-400 font-bold tracking-widest capitalize mt-1">{s.label}</p>
                                                 </div>
                                             ))}
                                         </div>
 
                                         {/* Socials */}
                                         <div className="flex items-center gap-4 pt-2">
-                                            <span className="text-[10px] text-slate-400 font-bold tracking-widest uppercase">Connect</span>
+                                            <span className="text-[10px] text-slate-400 font-bold tracking-widest capitalize">Connect</span>
                                             <div className="h-px flex-1 bg-slate-100" />
                                             {[
                                                 { icon: <FaLinkedinIn />, href: member.socials.linkedin, label: "LinkedIn" },

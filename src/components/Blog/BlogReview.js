@@ -43,7 +43,7 @@ const BlogReview = () => {
                 <FaShieldAlt size={56} />
             </motion.div>
 
-            <div className="container mx-auto max-w-7xl relative z-10">
+            <div className="container mx-auto relative z-10">
                 <div className="bg-white/40 backdrop-blur-xl rounded-[3rem] p-12 md:p-20 border border-white/60 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] relative overflow-hidden">
 
                     {/* Subtle grid overlay inside card */}
@@ -51,7 +51,7 @@ const BlogReview = () => {
 
                     <div className="relative z-10">
                         <AnimatedSection delay={0} direction="up" className="text-center mb-16">
-                            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 border border-pink-100 text-pink-600 font-black text-[10px] tracking-[0.2em] uppercase mb-8 shadow-sm">
+                            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 border border-pink-100 text-pink-600 font-black text-[10px] tracking-[0.2em] capitalize mb-8 shadow-sm">
                                 <FaThumbsUp className="text-orange-500" />
                                 Trusted by 500+ Clients
                             </div>
@@ -78,7 +78,7 @@ const BlogReview = () => {
 
                             <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-slate-500">
                                 <div className="h-px w-12 bg-gradient-to-r from-transparent to-slate-200 hidden md:block"></div>
-                                <p className="font-bold text-sm uppercase tracking-[0.3em] flex items-center gap-3">
+                                <p className="font-bold text-sm capitalize tracking-[0.3em] flex items-center gap-3">
                                     <span className="text-pink-600 text-2xl font-black">4.9</span>
                                     Average Rating Across 200+ Reviews
                                 </p>
@@ -101,7 +101,7 @@ const BlogReview = () => {
                                                     className="w-full h-full object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-110"
                                                 />
                                             </div>
-                                            <span className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-300 group-hover:text-pink-500 transition-colors">
+                                            <span className="text-[9px] font-black capitalize tracking-[0.2em] text-slate-300 group-hover:text-pink-500 transition-colors">
                                                 {item.label} Partner
                                             </span>
                                         </div>
@@ -117,17 +117,17 @@ const BlogReview = () => {
                     <div className="px-8 py-4 bg-slate-900 rounded-2xl flex flex-wrap items-center justify-center gap-8 shadow-2xl">
                         <div className="flex items-center gap-3">
                             <span className="text-white font-black text-2xl">99%</span>
-                            <span className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-tight">Customer<br />Satisfaction</span>
+                            <span className="text-slate-400 text-[10px] font-bold capitalize tracking-widest leading-tight">Customer<br />Satisfaction</span>
                         </div>
                         <div className="w-px h-8 bg-slate-800 hidden sm:block"></div>
                         <div className="flex items-center gap-3">
                             <span className="text-pink-500 font-black text-2xl">10+</span>
-                            <span className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-tight">Years Of<br />Excellence</span>
+                            <span className="text-slate-400 text-[10px] font-bold capitalize tracking-widest leading-tight">Years Of<br />Excellence</span>
                         </div>
                         <div className="w-px h-8 bg-slate-800 hidden sm:block"></div>
                         <div className="flex items-center gap-3">
                             <span className="text-orange-500 font-black text-2xl">24/7</span>
-                            <span className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-tight">Expert<br />Support</span>
+                            <span className="text-slate-400 text-[10px] font-bold capitalize tracking-widest leading-tight">Expert<br />Support</span>
                         </div>
                     </div>
                 </AnimatedSection>

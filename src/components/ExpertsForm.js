@@ -13,9 +13,9 @@ const ExpertsForm = () => {
             <div className="w-10 h-10 rounded-xl bg-pink-50 flex items-center justify-center text-pink-500 shadow-sm">
               <FaHeadset size={18} />
             </div>
-            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Get In Touch</span>
+            <span className="text-[10px] font-bold text-slate-400 capitalize tracking-widest">Get In Touch</span>
           </div>
-          <h5 className="text-3xl font-black text-slate-900 mb-3 uppercase tracking-tight">
+          <h5 className="text-3xl font-black text-slate-900 mb-3 capitalize tracking-tight">
             Talk to Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">Experts</span>
           </h5>
           <p className="text-slate-500 text-sm leading-relaxed">
@@ -61,7 +61,7 @@ const ExpertsForm = () => {
           </div>
 
           <div className="pt-2">
-            <button className="group relative flex items-center justify-center gap-3 w-full px-8 py-4 bg-gradient-to-r from-pink-600 to-orange-500 rounded-2xl text-white font-bold tracking-[0.2em] uppercase overflow-hidden shadow-lg shadow-pink-600/20 hover:shadow-pink-600/40 transition-all duration-300">
+            <button className="group relative flex items-center justify-center gap-3 w-full px-8 py-4 bg-gradient-to-r from-pink-600 to-orange-500 rounded-2xl text-white font-bold tracking-[0.2em] capitalize overflow-hidden shadow-lg shadow-pink-600/20 hover:shadow-pink-600/40 transition-all duration-300">
               <span className="relative z-10">Submit Now</span>
               <FaPaperPlane className="relative z-10 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity z-0"></div>
@@ -69,7 +69,7 @@ const ExpertsForm = () => {
 
             <div className="flex items-center justify-center gap-2 mt-6 text-slate-400">
               <FaLock className="text-[10px]" />
-              <span className="text-[10px] uppercase tracking-widest font-bold">Secure & Confidential</span>
+              <span className="text-[10px] capitalize tracking-widest font-bold">Secure & Confidential</span>
             </div>
           </div>
         </form>

@@ -30,18 +30,10 @@ const Header = () => {
                 <div className="max-w-screen-2xl mx-auto px-6 md:px-12 flex items-center justify-between gap-8">
 
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-3.5 shrink-0 group">
-                        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-600 to-orange-500 flex items-center justify-center shadow-lg shadow-pink-600/20 group-hover:shadow-pink-600/40 transition-all duration-500 group-hover:rotate-6">
-                            <Image src={logo} alt="Logo" width={28} height={28} className="object-contain" />
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="font-roboto font-black text-2xl tracking-tight text-slate-900 leading-tight">
-                                Webstep<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">Solutions</span>
-                            </span>
-                            <span className="font-mono text-[8px] tracking-[0.3em] uppercase text-slate-400 -mt-0.5 group-hover:text-pink-500/50 transition-colors">
-                                Digital Agency
-                            </span>
-                        </div>
+                    <Link href="/" className="flex rounded-[10px] overflow-hidden items-center gap-3.5 shrink-0 group">
+
+
+                        <Image src={logo} alt="Logo" width={150} className="object-contain" />
                     </Link>
 
                     {/* Desktop Navigation */}

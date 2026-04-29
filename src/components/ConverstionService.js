@@ -7,7 +7,7 @@ const ConverstionService = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gradient-to-r from-pink-50 to-orange-50 blur-[100px] pointer-events-none rounded-full"></div>
 
       <div className="container mx-auto max-w-4xl text-center relative z-10">
-        <div className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest uppercase mb-8 shadow-sm">
+        <div className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest capitalize mb-8 shadow-sm">
           Conversion Services
         </div>
         <h3 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-8 tracking-tight">

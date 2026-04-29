@@ -67,7 +67,7 @@ const ServicesPage = () => {
     <section className="py-16 md:py-24 bg-white relative z-10 px-6 font-roboto">
       <div className="container mx-auto">
         <div className="text-center mb-16 relative z-10">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest uppercase mb-4 shadow-sm">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest capitalize mb-4 shadow-sm">
             What We Offer
           </span>
           <h4 className="text-4xl md:text-5xl font-black text-slate-900">Our Services</h4>
@@ -89,7 +89,7 @@ const ServicesPage = () => {
               <p className="text-slate-500 text-sm leading-relaxed mb-6 relative z-10 flex-grow">
                 {service.description}
               </p>
-              <Link href={service.href} className="inline-flex items-center mt-auto gap-2 text-[10px] tracking-[0.2em] font-bold uppercase text-slate-400 group-hover:text-pink-500 transition-colors duration-300 relative z-10">
+              <Link href={service.href} className="inline-flex items-center mt-auto gap-2 text-[10px] tracking-[0.2em] font-bold capitalize text-slate-400 group-hover:text-pink-500 transition-colors duration-300 relative z-10">
                 Learn more <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -97,7 +97,7 @@ const ServicesPage = () => {
         </div>
 
         <div className="text-center mt-16 relative z-10">
-          <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-pink-600 to-orange-500 text-white rounded-xl font-bold tracking-widest uppercase text-xs hover:shadow-lg hover:shadow-pink-600/20 hover:-translate-y-1 transition-all duration-300 group">
+          <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-pink-600 to-orange-500 text-white rounded-xl font-bold tracking-widest capitalize text-xs hover:shadow-lg hover:shadow-pink-600/20 hover:-translate-y-1 transition-all duration-300 group">
             View All Services <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

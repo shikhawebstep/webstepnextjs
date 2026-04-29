@@ -20,7 +20,7 @@ const FormSection = () => {
             <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-pink-100 rounded-full blur-[80px] z-0 pointer-events-none"></div>
 
             <div className="relative z-10">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-white border border-slate-200 text-pink-500 font-bold text-[10px] tracking-widest uppercase mb-8 shadow-sm">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-white border border-slate-200 text-pink-500 font-bold text-[10px] tracking-widest capitalize mb-8 shadow-sm">
                 Get In Touch
               </span>
               <h4 className="text-4xl md:text-5xl font-black leading-tight text-slate-900 mb-6">

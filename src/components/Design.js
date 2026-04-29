@@ -116,7 +116,7 @@ const Design = () => {
                     {/* Right Content */}
                     <div className="w-full md:w-1/2 space-y-8 relative z-10">
                         <div>
-                            <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest uppercase mb-6 shadow-sm">Creative Solutions</span>
+                            <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest capitalize mb-6 shadow-sm">Creative Solutions</span>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight tracking-tight">
                                 GRAPHIC DESIGNS
                             </h1>

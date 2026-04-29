@@ -8,30 +8,30 @@ const FullStackBanner = () => {
     <section className="py-16 md:py-24 bg-white relative z-10 px-6 overflow-hidden font-roboto">
       {/* Decorative background glows */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-50 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
-      
-      <div className="container mx-auto max-w-7xl relative z-10">
+
+      <div className="container mx-auto relative z-10">
         <AnimatedSection delay={0.1} direction="up">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:w-3/5">
               <div className="mb-10 text-center lg:text-left">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest uppercase mb-6 shadow-sm">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest capitalize mb-6 shadow-sm">
                   End-to-End Excellence
                 </span>
-                <h1 className="text-4xl md:text-6xl font-black leading-tight text-slate-900 mb-8 tracking-tight uppercase">
+                <h1 className="text-4xl md:text-6xl font-black leading-tight text-slate-900 mb-8 tracking-tight capitalize">
                   Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">Full Stack</span> Development
                 </h1>
                 <p className="text-slate-500 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
                   We help enterprises with full-stack mobile app development, web development, and custom software. Our developers have in-depth experience in both backend & frontend technologies.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                    <button className="px-8 py-4 bg-gradient-to-r from-pink-600 to-orange-500 text-white rounded-2xl text-[11px] font-black uppercase tracking-[0.2em] shadow-lg shadow-pink-600/20 hover:shadow-pink-600/40 hover:-translate-y-1 transition-all duration-300">
-                        Start Your Project
-                    </button>
-                    <button className="px-8 py-4 bg-white border border-slate-200 text-slate-900 rounded-2xl text-[11px] font-black uppercase tracking-[0.2em] shadow-sm hover:border-pink-500 transition-all duration-300">
-                        Our Process
-                    </button>
+                  <button className="px-8 py-4 bg-gradient-to-r from-pink-600 to-orange-500 text-white rounded-2xl text-[11px] font-black capitalize tracking-[0.2em] shadow-lg shadow-pink-600/20 hover:shadow-pink-600/40 hover:-translate-y-1 transition-all duration-300">
+                    Start Your Project
+                  </button>
+                  <button className="px-8 py-4 bg-white border border-slate-200 text-slate-900 rounded-2xl text-[11px] font-black capitalize tracking-[0.2em] shadow-sm hover:border-pink-500 transition-all duration-300">
+                    Our Process
+                  </button>
                 </div>
               </div>
             </div>

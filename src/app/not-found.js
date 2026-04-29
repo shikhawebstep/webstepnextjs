@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function NotFound() {
   return (
     <section className="relative w-full min-h-[80vh] flex flex-col items-center justify-center overflow-hidden bg-white text-slate-900 font-roboto px-6 py-20">
-      
+
       {/* Ambient Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-[10%] left-[10%] w-[40%] h-[40%] rounded-full bg-gradient-to-br from-pink-500/5 to-orange-500/5 blur-[100px] animate-pulse" />
@@ -14,7 +14,7 @@ export default function NotFound() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
-        
+
         {/* Animated 404 Number */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -26,16 +26,16 @@ export default function NotFound() {
             404
           </h1>
           <div className="absolute inset-0 flex items-center justify-center">
-             <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                className="bg-white/40 backdrop-blur-md border border-white/50 px-8 py-4 rounded-3xl shadow-2xl"
-             >
-                <span className="font-heading text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">
-                    Lost in Space?
-                </span>
-             </motion.div>
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="bg-white/40 backdrop-blur-md border border-white/50 px-8 py-4 rounded-3xl shadow-2xl"
+            >
+              <span className="font-heading text-2xl md:text-4xl font-black text-slate-900 capitalize tracking-tight">
+                Lost in Space?
+              </span>
+            </motion.div>
           </div>
         </motion.div>
 
@@ -46,10 +46,10 @@ export default function NotFound() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="space-y-6"
         >
-          <h2 className="font-heading text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter">
+          <h2 className="font-heading text-4xl md:text-5xl font-black text-slate-900 capitalize tracking-tighter">
             Oops! Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-500">Not Found</span>
           </h2>
-          
+
           <p className="text-lg md:text-xl text-slate-500 font-light leading-relaxed max-w-xl mx-auto">
             The page you're looking for might have been moved, deleted, or never existed in the first place. Don't worry, let's get you back on track.
           </p>
@@ -61,7 +61,7 @@ export default function NotFound() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="pt-6"
           >
-            <Link href="/" className="group relative inline-flex items-center justify-center px-12 py-5 bg-slate-900 text-white rounded-2xl text-[11px] font-black uppercase tracking-[0.3em] overflow-hidden shadow-2xl shadow-slate-900/20 hover:-translate-y-1 transition-all duration-500">
+            <Link href="/" className="group relative inline-flex items-center justify-center px-12 py-5 bg-slate-900 text-white rounded-2xl text-[11px] font-black capitalize tracking-[0.3em] overflow-hidden shadow-2xl shadow-slate-900/20 hover:-translate-y-1 transition-all duration-500">
               <span className="relative z-10">Return to Home</span>
               <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </Link>
@@ -71,7 +71,7 @@ export default function NotFound() {
 
       {/* Decorative Dots Pattern */}
       <div className="absolute inset-0 opacity-[0.03] z-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 0.5px, transparent 0.5px)', backgroundSize: '40px 40px' }}></div>
-      
+
     </section>
   );
 }

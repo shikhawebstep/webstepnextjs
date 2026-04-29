@@ -19,7 +19,7 @@ const OurExpertize = () => {
     <section className="py-16 md:py-24 bg-white relative z-10 px-6 font-roboto">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest uppercase mb-4 shadow-sm">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest capitalize mb-4 shadow-sm">
             What We Do Best
           </span>
           <h4 className="text-4xl md:text-5xl font-black text-slate-900">Our Expertise</h4>
@@ -41,7 +41,7 @@ const OurExpertize = () => {
                   {area.title}
                 </h6>
 
-                <a href={area.link} className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-slate-400 group-hover:text-pink-500 transition-colors duration-300">
+                <a href={area.link} className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] capitalize text-slate-400 group-hover:text-pink-500 transition-colors duration-300">
                   Read More <FaArrowRight className="text-pink-500 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
