@@ -24,7 +24,7 @@ const NodeDev = () => {
                 </h2>
                 <div className="space-y-6 text-slate-500 text-lg leading-relaxed">
                   <p>
-                    Node.js has revolutionized backend development with its non-blocking, event-driven architecture. It's the go-to choice for companies looking to build real-time, data-intensive applications.
+                    Node.js has revolutionized backend development with its non-blocking, event-driven architecture. It&apos;s the go-to choice for companies looking to build real-time, data-intensive applications.
                   </p>
                   <p>
                     At Webstep Solutions, we leverage Node.js to build everything from simple REST APIs to complex microservices and real-time streaming platforms. Our developers are experts in the entire Node.js ecosystem, including Express, NestJS, and more.

@@ -45,7 +45,7 @@ const Packages = () => {
 
     return (
         <section className="py-20 text-slate-900 min-h-screen px-4 md:px-8 bg-slate-50">
-            <div className="container mx-auto max-w-7xl">
+            <div className="container mx-auto ">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-4 font-heading bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-orange-500">
                         Our Packages
@@ -62,8 +62,8 @@ const Packages = () => {
                             key={tab}
                             onClick={() => setActiveTab(tab)}
                             className={`px-8 py-3 rounded-full font-bold capitalize transition-all duration-300 ${activeTab === tab
-                                    ? 'bg-gradient-to-r from-pink-600 to-orange-500 text-white shadow-lg shadow-pink-600/25'
-                                    : 'bg-white text-slate-500 hover:bg-slate-100 hover:text-slate-900 border border-slate-200'
+                                ? 'bg-gradient-to-r from-pink-600 to-orange-500 text-white shadow-lg shadow-pink-600/25'
+                                : 'bg-white text-slate-500 hover:bg-slate-100 hover:text-slate-900 border border-slate-200'
                                 }`}
                         >
                             {tab}
@@ -77,8 +77,8 @@ const Packages = () => {
                         <div
                             key={index}
                             className={`relative bg-white rounded-3xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-2 ${pkg.isPopular
-                                    ? 'border-2 border-pink-500 shadow-2xl shadow-pink-600/10'
-                                    : 'border border-slate-200 hover:border-slate-300 shadow-xl shadow-slate-200/50'
+                                ? 'border-2 border-pink-500 shadow-2xl shadow-pink-600/10'
+                                : 'border border-slate-200 hover:border-slate-300 shadow-xl shadow-slate-200/50'
                                 }`}
                         >
                             {pkg.isPopular && (
@@ -114,8 +114,8 @@ const Packages = () => {
                             <div className="mt-auto flex flex-col gap-3">
                                 <Modal />
                                 <button className={`w-full py-4 rounded-xl font-bold transition-all ${pkg.isPopular
-                                        ? 'bg-gradient-to-r from-pink-600 to-orange-500 text-white hover:opacity-90 shadow-lg'
-                                        : 'bg-slate-100 text-slate-800 hover:bg-slate-200'
+                                    ? 'bg-gradient-to-r from-pink-600 to-orange-500 text-white hover:opacity-90 shadow-lg'
+                                    : 'bg-slate-100 text-slate-800 hover:bg-slate-200'
                                     }`}>
                                     {pkg.btn}
                                 </button>

@@ -1,216 +1,121 @@
 "use client";
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import {
-  FaSearch,
-  FaPenNib,
-  FaCode,
-  FaRocket,
-  FaCog
-} from 'react-icons/fa';
-import processimg from "@/components/img/img1.png";
+import React from 'react';
+import { FaSearch, FaPenNib, FaCode, FaRocket, FaCog, FaChartLine, FaArrowRight } from 'react-icons/fa';
 
 const Process = () => {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
-
-  const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
-
   const developmentProcess = [
     {
       id: '01',
       title: 'Discovery',
-      description: 'Understanding the underlying concept and target audience to lay a solid foundation.',
-      icon: <FaSearch className="w-6 h-6" />,
-      color: "from-pink-500 to-rose-500"
+      subtitle: 'Insight & Strategy',
+      description: 'Understanding the underlying concept and target audience to build a solid foundation.',
+      icon: <FaSearch />,
+      color: "from-[#FF1F8E] to-[#FF0055]"
     },
     {
       id: '02',
       title: 'Design',
-      description: 'Creating intuitive wireframes and refining them on the basis of your valuable feedback.',
-      icon: <FaPenNib className="w-6 h-6" />,
-      color: "from-rose-500 to-orange-500"
+      subtitle: 'UI/UX Architecture',
+      description: 'Creating wireframes and refining them based on feedback for an intuitive experience.',
+      icon: <FaPenNib />,
+      color: "from-[#FF0055] to-[#D400CC]"
     },
     {
       id: '03',
       title: 'Build',
-      description: 'Developing robust, scalable functionality using state-of-the-art modern technologies.',
-      icon: <FaCode className="w-6 h-6" />,
-      color: "from-orange-500 to-amber-500"
+      subtitle: 'Development Phase',
+      description: 'Developing robust functionality using cutting-edge technologies and best practices.',
+      icon: <FaCode />,
+      color: "from-[#D400CC] to-[#8E2DE2]"
     },
     {
       id: '04',
       title: 'Launch',
-      description: 'Thoroughly testing the product to ensure a flawless end-user experience before launch.',
-      icon: <FaRocket className="w-6 h-6" />,
-      color: "from-amber-500 to-yellow-500"
+      subtitle: 'Quality Assurance',
+      description: 'For better end-user experience, we rigorously test the product and ensure a smooth launch.',
+      icon: <FaRocket />,
+      color: "from-[#8E2DE2] to-[#4A00E0]"
     },
     {
       id: '05',
       title: 'Maintain',
-      description: 'Adding new functionalities and providing ongoing support for continuous success.',
-      icon: <FaCog className="w-6 h-6" />,
-      color: "from-yellow-500 to-emerald-500"
+      subtitle: 'Ongoing Support',
+      description: 'Adding new functionalities and providing support for a delightful end-user experience.',
+      icon: <FaCog />,
+      color: "from-[#FF1F8E] to-[#D400CC]"
     },
+    {
+      id: '06',
+      title: 'Optimization',
+      subtitle: 'Growth & Scaling',
+      description: 'Analyzing performance and optimizing the product to drive continuous growth and success.',
+      icon: <FaChartLine />,
+      color: "from-[#D400CC] to-[#4A00E0]"
+    }
   ];
 
   return (
-    <section ref={containerRef} className="py-24  bg-slate-50 text-slate-900 relative overflow-hidden font-roboto">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-pink-100/50 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-[10%] right-[-5%] w-[350px] h-[350px] rounded-full bg-orange-50/50 blur-[100px] animate-pulse [animation-delay:2s]" />
-
-        {/* Grid texture */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)',
-            backgroundSize: '48px 48px',
-          }}
-        />
-      </div>
+    <section className="py-20 md:py-24 relative overflow-hidden bg-white px-6 font-roboto">
+      {/* Background Ambience */}
+      <div className="absolute top-1/2 left-0 w-[800px] h-[800px] bg-[#FF1F8E]/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-24">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 text-[10px] font-bold tracking-[0.2em] text-pink-500 capitalize bg-white border border-slate-100 rounded-full shadow-sm"
-          >
-            Our Methodology
-          </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-black text-slate-900 tracking-tight"
-          >
-            Workflow <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">Excellence</span>
-          </motion.h2>
-        </div>
+        <div className="flex flex-col items-center text-center mb-20">
+          <div className="">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="w-10 h-[2px] bg-[#FF1F8E]"></div>
+              <span className="text-[11px] font-bold tracking-[0.3em] text-[#FF1F8E] uppercase">Workflow Excellence</span>
+              <div className="w-10 h-[2px] bg-[#FF1F8E]"></div>
+            </div>
 
-        <div className="flex flex-col lg:flex-row gap-20 items-start">
-          {/* Timeline side */}
-          <div className="w-full lg:w-3/5 relative">
-            {/* Main Vertical Track */}
-            <div className="absolute left-[40px] top-6 bottom-6 w-[2px] bg-slate-200 hidden md:block"></div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-none tracking-tighter mb-8">
+              A High-Performance
+              <span className="text-[#FF1F8E]"> Development </span>
+            </h2>
 
-            {/* Animated Progress Line */}
-            <motion.div
-              style={{ scaleY, originY: 0 }}
-              className="absolute left-[40px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-pink-500 via-orange-500 to-amber-500 hidden md:block z-10"
-            />
-
-            <div className="space-y-12">
-              {developmentProcess.map((step, index) => (
-                <motion.div
-                  key={step.id}
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="relative flex flex-col md:flex-row gap-8 md:gap-12 items-start group"
-                >
-                  {/* Icon Container */}
-                  <div className="flex-shrink-0 z-20 relative">
-                    <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      className={`w-20 h-20 rounded-2xl bg-white border border-slate-100 shadow-xl flex items-center justify-center relative overflow-hidden group-hover:border-pink-500/50 transition-all duration-500`}
-                    >
-                      <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-                      <span className="text-2xl font-black text-slate-100 absolute -bottom-2 -right-1 leading-none select-none group-hover:text-pink-500/10 transition-colors">
-                        {step.id}
-                      </span>
-                      <div className="text-pink-500 group-hover:text-pink-600 group-hover:scale-110 transition-all duration-500 relative z-10">
-                        {step.icon}
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  {/* Content Card */}
-                  <motion.div
-                    whileHover={{ y: -5 }}
-                    className="flex-1 bg-white p-8 md:p-10 rounded-[2rem] border border-slate-100 shadow-xl hover:shadow-2xl hover:border-pink-500/10 transition-all duration-500 relative overflow-hidden group/card"
-                  >
-                    <div className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${step.color} opacity-0 group-hover/card:opacity-100 transition-opacity duration-500`}></div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                      {step.title}
-                      <span className="h-px flex-1 bg-slate-100 group-hover/card:bg-pink-500/20 transition-colors duration-500"></span>
-                    </h3>
-                    <p className="text-slate-600 leading-relaxed text-lg group-hover:text-slate-800 transition-colors">
-                      {step.description}
-                    </p>
-                  </motion.div>
-                </motion.div>
-              ))}
+            <div>
+              <p className="text-lg text-slate-500 max-w-xl mx-auto leading-relaxed font-medium">
+                Our systematic 6-step approach ensures every project is delivered with bulletproof stability and precision.
+              </p>
             </div>
           </div>
+        </div>
 
-          {/* Sticky Image Side */}
-          <div className="w-full lg:w-2/5 lg:sticky lg:top-32">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.92 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative group"
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-8">
+          {developmentProcess.map((step) => (
+            <div
+              key={step.id}
+              className="group bg-white p-10 rounded-[2.5rem] border border-slate-100 hover:border-[#FF1F8E]/20 transition-all duration-500 shadow-sm hover:shadow-xl flex flex-col relative overflow-hidden"
             >
-              {/* === LAYER 1: Deep ambient glow === */}
-              <div className="absolute -inset-8 bg-gradient-to-br from-pink-500/10 via-transparent to-orange-500/10 blur-[80px] rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-1000" />
+              {/* ID Badge */}
+              <span className="absolute top-8 right-8 text-6xl font-black text-slate-100 group-hover:text-[#FF1F8E]/5 transition-colors duration-500 select-none">
+                {step.id}
+              </span>
 
-              {/* === LAYER 2: Rotating border ring === */}
-              <div className="absolute -inset-3 rounded-[3rem] border border-dashed border-pink-500/10 animate-spin" style={{ animationDuration: "20s" }} />
-              <div className="absolute -inset-6 rounded-[3.5rem] border border-dashed border-orange-500/10 animate-spin" style={{ animationDuration: "30s", animationDirection: "reverse" }} />
-
-              {/* === LAYER 3: Main image frame === */}
-              <div className="relative z-10 rounded-[2.5rem] overflow-hidden border border-slate-200 shadow-2xl group-hover:border-pink-500/20 transition-colors duration-700">
-                <Image
-                  src={processimg}
-                  alt="Process Illustration"
-                  className="w-full h-auto block transform group-hover:scale-[1.04] transition-transform duration-[800ms] ease-out"
-                  priority
-                />
+              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center text-white text-xl mb-8 shadow-lg group-hover:scale-110 transition-transform relative z-10`}>
+                {step.icon}
               </div>
 
-              {/* === LAYER 5: Floating stat cards === */}
-
-              {/* Success Rate badge — bottom left */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-2xl border border-slate-100 z-30 hover:border-pink-500/40 transition-colors group/badge"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-pink-500/10 to-rose-500/5 flex items-center justify-center text-pink-500 border border-pink-500/10 group-hover/badge:border-pink-500/30 transition-colors">
-                    <FaRocket className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-[9px] text-slate-400 capitalize tracking-[0.2em] font-bold">Success Rate</p>
-                    <p className="text-xl font-black text-slate-900">99.9%</p>
-                  </div>
+              <div className="relative z-10">
+                <span className="text-[10px] font-black text-[#FF1F8E] uppercase tracking-[0.2em] mb-2 block opacity-80">
+                  {step.subtitle}
+                </span>
+                <h3 className="text-2xl font-black text-slate-900 mb-6 group-hover:text-[#FF1F8E] transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-slate-500 text-sm leading-relaxed mb-10 font-medium">
+                  {step.description}
+                </p>
+                <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-[#FF1F8E]">
+                  Learn More <FaArrowRight />
                 </div>
-              </motion.div>
-            </motion.div>
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Process;
-
-
-
-

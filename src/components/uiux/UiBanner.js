@@ -1,5 +1,5 @@
 import React from 'react';
-import ui from "@/components/img/uiux-development2.png";
+import ui from "@/components/img/uiux-development2.webp";
 import Image from 'next/image';
 import AnimatedSection from '../AnimatedSection';
 

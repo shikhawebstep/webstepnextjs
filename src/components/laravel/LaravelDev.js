@@ -27,7 +27,7 @@ const LaravelDev = () => {
                     Laravel is known for its expressive syntax and rich ecosystem, making it the preferred framework for modern PHP development. It simplifies common tasks like authentication, routing, and caching.
                   </p>
                   <p>
-                    At Webstep Solutions, we use Laravel to build enterprise-grade applications that are robust, secure, and easy to maintain. Our developers are masters of Eloquent ORM, Blade templating, and Laravel's advanced security features.
+                    At Webstep Solutions, we use Laravel to build enterprise-grade applications that are robust, secure, and easy to maintain. Our developers are masters of Eloquent ORM, Blade templating, and Laravel&apos;s advanced security features.
                   </p>
                   <p>
                     Whether you need a custom CRM, a high-traffic eCommerce platform, or a complex API, our Laravel experts deliver solutions that drive business growth and technical excellence.

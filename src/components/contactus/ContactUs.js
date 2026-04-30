@@ -19,10 +19,10 @@ const ContactUs = () => {
                                 Get In Touch
                             </span>
                             <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight capitalize leading-[1.1]">
-                                Let's Start Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">Next Big Thing</span>
+                                Let&apos;s Start Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">Next Big Thing</span>
                             </h1>
                             <p className="text-slate-400 text-lg md:text-xl leading-relaxed">
-                                Have a groundbreaking idea? We're here to turn it into reality. Reach out and let's start building the future together.
+                                Have a groundbreaking idea? We&apos;re here to turn it into reality. Reach out and let&apos;s start building the future together.
                             </p>
                         </div>
                     </AnimatedSection>
@@ -92,7 +92,7 @@ const ContactUs = () => {
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-slate-50 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
                                 <div className="mb-10">
                                     <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight capitalize">Send us a Message</h2>
-                                    <p className="text-slate-400 text-sm">Fill out the form below and we'll get back to you within 24 hours.</p>
+                                    <p className="text-slate-400 text-sm">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
                                 </div>
                                 <ContactForm />
                             </div>

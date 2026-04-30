@@ -24,7 +24,7 @@ const MobileDev = () => {
                 </h2>
                 <div className="space-y-6 text-slate-500 text-lg leading-relaxed">
                   <p>
-                    In today's mobile-centric world, having a robust mobile presence is crucial. We specialize in building applications that work flawlessly across all devices, ensuring your brand is always at your customers' fingertips.
+                    In today&apos;s mobile-centric world, having a robust mobile presence is crucial. We specialize in building applications that work flawlessly across all devices, ensuring your brand is always at your customers&apos; fingertips.
                   </p>
                   <p>
                     Whether you need a high-performance native iOS or Android app, or a cost-effective cross-platform solution using Flutter or React Native, our developers have the expertise to bring your vision to life.

@@ -47,42 +47,19 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-white text-slate-600 pt-24 pb-12 relative overflow-hidden border-t border-slate-100">
-            {/* Decorative Background Glows */}
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-pink-50 blur-[120px] rounded-full pointer-events-none"></div>
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-orange-50 blur-[120px] rounded-full pointer-events-none"></div>
+        <footer className="bg-white text-slate-500 pt-24 pb-12 relative overflow-hidden border-t border-slate-100 font-roboto">
+            {/* Background Decor */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF1F8E]/5 rounded-full blur-[150px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#D400CC]/5 rounded-full blur-[150px] pointer-events-none" />
 
-            {/* Mobile Sticky Action Bar */}
-            <div className="fixed lg:hidden bottom-6 left-6 right-6 z-[100] pointer-events-none">
-                <div className="bg-white/80 backdrop-blur-2xl border border-slate-200 rounded-3xl shadow-2xl p-2 flex justify-around items-center pointer-events-auto max-w-lg mx-auto">
-                    {[
-                        { icon: <FaPhoneAlt size={18} />, href: "tel:9781890033", label: "Call" },
-                        { icon: <FaRegCommentDots size={18} />, href: "#", label: "Chat" },
-                        { icon: <FaEnvelope size={18} />, href: "mailto:hello@webstepsolutions.com", label: "Email" },
-                        { icon: <FaMapMarkerAlt size={18} />, href: "#", label: "Visit" }
-                    ].map((item, idx) => (
-                        <a
-                            key={idx}
-                            href={item.href}
-                            className="flex flex-col items-center gap-1.5 p-3 text-slate-400 hover:text-pink-500 transition-colors"
-                        >
-                            {item.icon}
-                            <span className="text-[10px] font-bold uppercase tracking-widest">{item.label}</span>
-                        </a>
-                    ))}
-                </div>
-            </div>
-
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto px-6 relative z-10 ">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
                     {/* Brand Section */}
                     <div className="space-y-8">
-                        <Link href="/" className="flex w-fit rounded-[10px] overflow-hidden items-center gap-3.5 shrink-0 group">
-
-                            <Image src={logo} alt="Logo" width={170} className="object-cover" />
-
+                        <Link href="/" className="flex w-fit items-center group">
+                            <Image src={logo} alt="Logo" width={170} />
                         </Link>
-                        <p className="text-lg leading-relaxed text-slate-500 font-medium">
+                        <p className="text-lg leading-relaxed text-slate-400 font-medium">
                             Empowering brands with cutting-edge digital solutions. We transform complex ideas into seamless digital experiences.
                         </p>
                         <div className="flex items-center gap-4">
@@ -91,7 +68,7 @@ const Footer = () => {
                                     key={idx}
                                     href={social.href}
                                     aria-label={social.label}
-                                    className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-600 hover:to-orange-500 hover:text-white hover:border-transparent transition-all duration-300 shadow-sm"
+                                    className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-300 hover:bg-[#FF1F8E] hover:text-white hover:border-[#FF1F8E] transition-all duration-300 shadow-sm"
                                 >
                                     {social.icon}
                                 </a>
@@ -99,16 +76,15 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Quick Links */}
+                    {/* Navigation */}
                     <div>
-                        <h4 className="text-slate-900 font-bold text-lg mb-8 uppercase tracking-[0.2em] flex items-center gap-2">
-                            <span className="w-8 h-px bg-pink-500"></span> Navigation
+                        <h4 className="text-slate-900 font-black text-lg mb-8 uppercase tracking-[0.2em] flex items-center gap-2">
+                            <span className="w-8 h-px bg-[#FF1F8E]"></span> Navigation
                         </h4>
                         <ul className="space-y-4">
                             {quickLinks.map((link, idx) => (
                                 <li key={idx}>
-                                    <Link href={link.href} className="hover:text-pink-500 transition-colors flex items-center gap-2 group text-slate-500 font-medium">
-                                        <FaArrowRight size={12} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-pink-500" />
+                                    <Link href={link.href} className="hover:text-[#FF1F8E] transition-colors flex items-center gap-2 group text-slate-400 font-bold text-[11px] uppercase tracking-widest">
                                         {link.name}
                                     </Link>
                                 </li>
@@ -116,16 +92,15 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Services */}
+                    {/* Expertise */}
                     <div>
-                        <h4 className="text-slate-900 font-bold text-lg mb-8 uppercase tracking-[0.2em] flex items-center gap-2">
-                            <span className="w-8 h-px bg-orange-500"></span> Expertise
+                        <h4 className="text-slate-900 font-black text-lg mb-8 uppercase tracking-[0.2em] flex items-center gap-2">
+                            <span className="w-8 h-px bg-[#FF1F8E]"></span> Expertise
                         </h4>
                         <ul className="space-y-4">
                             {services.map((service, idx) => (
                                 <li key={idx}>
-                                    <Link href={service.href} className="hover:text-orange-500 transition-colors flex items-center gap-2 group text-slate-500 font-medium">
-                                        <FaArrowRight size={12} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-orange-500" />
+                                    <Link href={service.href} className="hover:text-[#FF1F8E] transition-colors flex items-center gap-2 group text-slate-400 font-bold text-[11px] uppercase tracking-widest">
                                         {service.name}
                                     </Link>
                                 </li>
@@ -133,48 +108,43 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Newsletter & Contact */}
+                    {/* Newsletter */}
                     <div className="space-y-8">
                         <div>
-                            <h4 className="text-slate-900 font-bold text-lg mb-6 uppercase tracking-[0.2em]">Newsletter</h4>
-                            <p className="text-sm mb-6 text-slate-500 leading-relaxed font-medium">Subscribe to get the latest digital trends and updates delivered to your inbox.</p>
-                            <div className="relative group">
+                            <h4 className="text-slate-900 font-black text-lg mb-6 uppercase tracking-[0.2em]">Newsletter</h4>
+                            <p className="text-sm mb-6 text-slate-400 leading-relaxed font-medium">Subscribe to get the latest digital trends delivered to your inbox.</p>
+                            <div className="relative group flex items-center">
                                 <input
                                     type="email"
-                                    placeholder="your@email.com"
-                                    className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-6 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-pink-500 transition-all"
+                                    placeholder="Your email address"
+                                    className="w-full bg-slate-50 border border-slate-100 rounded-full py-4 pl-6 pr-14 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:border-[#FF1F8E]/50 transition-all duration-500 shadow-sm"
                                 />
-                                <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-gradient-to-r from-pink-600 to-orange-500 flex items-center justify-center text-white shadow-lg shadow-pink-600/20 group-hover:scale-105 transition-all">
-                                    <FaPaperPlane size={16} />
+                                <button className="absolute right-2 w-10 h-10 rounded-full bg-[#FF1F8E] flex items-center justify-center text-white shadow-lg hover:scale-105 transition-all">
+                                    <FaPaperPlane size={14} />
                                 </button>
                             </div>
                         </div>
-                        <div className="space-y-4">
-                            <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                                <div className="w-10 h-10 rounded-xl bg-pink-600/10 flex items-center justify-center text-pink-500 border border-pink-500/10">
-                                    <FaPhoneAlt size={16} />
-                                </div>
-                                <div>
-                                    <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Talk to us</p>
-                                    <a href="tel:9781890033" className="text-slate-900 font-bold hover:text-pink-500 transition-colors tracking-wide">97818-90033</a>
-                                </div>
+                        <div className="flex items-center gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div className="w-12 h-12 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-[#FF1F8E] shadow-sm">
+                                <FaPhoneAlt size={18} />
+                            </div>
+                            <div>
+                                <p className="text-[10px] uppercase tracking-widest text-slate-300 font-black">Talk to us</p>
+                                <a href="tel:9781890033" className="text-slate-900 font-black hover:text-[#FF1F8E] transition-colors">+91 97818-90033</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Bottom Copyright */}
+                {/* Copyright */}
                 <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-sm text-slate-500 font-medium">
-                        © {currentYear} <span className="text-slate-900 font-bold">Webstep Solutions</span>. All rights reserved.
+                    <p className="text-xs text-slate-300 font-bold uppercase tracking-widest">
+                        © {currentYear} <span className="text-slate-900">Webstep Solutions</span>. All Rights Reserved.
                     </p>
-                    <div className="flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
+                    <div className="flex items-center gap-8 text-[10px] font-black uppercase tracking-widest text-slate-300">
                         <Link href="/privacy" className="hover:text-slate-900 transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-slate-900 transition-colors">Terms of Service</Link>
-                        <button
-                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                            className="flex items-center gap-2 group hover:text-slate-900 transition-colors"
-                        >
+                        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2 group hover:text-slate-900 transition-colors">
                             Back to top <FaChevronUp size={12} className="group-hover:-translate-y-1 transition-transform" />
                         </button>
                     </div>
@@ -185,5 +155,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

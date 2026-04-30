@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaAngleDown } from 'react-icons/fa';
 
-const Menu = ({ mobile = false, closeMenu }) => {
+const Menu = ({ mobile = false, closeMenu, scrolled = false }) => {
     const [activeSubmenu, setActiveSubmenu] = useState(false);
 
     const navLinks = [
@@ -19,8 +19,8 @@ const Menu = ({ mobile = false, closeMenu }) => {
     ];
 
     const linkClasses = mobile
-        ? "flex items-center justify-between w-full py-4 text-slate-600 hover:text-pink-600 font-semibold text-lg border-b border-slate-100 transition-colors"
-        : "px-5 py-2.5 text-slate-500 hover:text-slate-900 font-bold text-[11px] tracking-[0.12em] uppercase transition-all relative group";
+        ? "flex items-center justify-between w-full py-4 text-slate-600 hover:text-[#FF1F8E] font-bold text-[14px] tracking-widest uppercase border-b border-slate-100 transition-colors"
+        : `px-5 py-2.5 ${scrolled ? 'text-slate-900' : 'text-slate-500'} hover:text-[#FF1F8E] font-black text-[10px] tracking-[0.2em] uppercase transition-all relative group`;
 
     return (
         <nav className={`w-full ${mobile ? "block" : "flex items-center justify-center font-roboto"}`}>
@@ -35,14 +35,14 @@ const Menu = ({ mobile = false, closeMenu }) => {
                             >
                                 <button
                                     onClick={mobile ? () => setActiveSubmenu(!activeSubmenu) : undefined}
-                                    className={`${linkClasses} flex items-center gap-1 focus:outline-none`}
+                                    className={`${linkClasses} flex items-center gap-2 focus:outline-none`}
                                 >
                                     <span>{link.name}</span>
-                                    <FaAngleDown className={`text-[10px] transition-transform duration-300 ${activeSubmenu ? "rotate-180 text-pink-500" : "opacity-40"}`} />
+                                    <FaAngleDown className={`text-[10px] transition-transform duration-300 ${activeSubmenu ? "rotate-180 text-[#FF1F8E]" : "opacity-40"}`} />
 
                                     {!mobile && (
                                         <motion.div
-                                            className="absolute bottom-1 left-5 right-5 h-px bg-gradient-to-r from-pink-500 to-orange-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                                            className="absolute bottom-1 left-5 right-5 h-[2px] bg-[#FF1F8E] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
                                         />
                                     )}
                                 </button>
@@ -50,13 +50,13 @@ const Menu = ({ mobile = false, closeMenu }) => {
                                 <AnimatePresence>
                                     {activeSubmenu && (
                                         <motion.div
-                                            initial={{ opacity: 0, y: mobile ? 0 : 10, height: mobile ? 0 : 'auto' }}
-                                            animate={{ opacity: 1, y: 0, height: 'auto' }}
-                                            exit={{ opacity: 0, y: mobile ? 0 : 10, height: mobile ? 0 : 0 }}
-                                            transition={{ duration: 0.3, ease: "easeOut" }}
+                                            initial={{ opacity: 0, y: mobile ? 0 : 15 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: mobile ? 0 : 15 }}
+                                            transition={{ duration: 0.4, ease: "easeOut" }}
                                             className={`${mobile
-                                                ? "bg-slate-50 rounded-2xl overflow-hidden"
-                                                : "absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white backdrop-blur-2xl rounded-3xl shadow-2xl border border-slate-100 z-[100] overflow-hidden min-w-[200px]"
+                                                ? "bg-slate-50 rounded-2xl overflow-hidden mt-2"
+                                                : "absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white rounded-[2rem] shadow-2xl border border-slate-100 z-[100] overflow-hidden min-w-[240px] p-2"
                                                 }`}
                                         >
                                             <SubMenus mobile={mobile} closeMenu={() => {
@@ -76,7 +76,7 @@ const Menu = ({ mobile = false, closeMenu }) => {
                                 {link.name}
                                 {!mobile && (
                                     <motion.div
-                                        className="absolute bottom-1 left-5 right-5 h-px bg-gradient-to-r from-pink-500 to-orange-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                                        className="absolute bottom-1 left-5 right-5 h-[2px] bg-[#FF1F8E] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
                                     />
                                 )}
                             </Link>
@@ -89,5 +89,3 @@ const Menu = ({ mobile = false, closeMenu }) => {
 };
 
 export default Menu;
-
-

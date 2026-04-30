@@ -4,43 +4,55 @@ import AnimatedSection from '../AnimatedSection';
 
 const PhpDev = () => {
   return (
-    <section className="py-16 md:py-24 bg-slate-50 relative z-10 px-6 overflow-hidden font-roboto">
+    <section className="py-24 md:py-32 bg-slate-50 relative z-10 px-6 overflow-hidden font-roboto">
+      {/* Dynamic background element */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-white -skew-x-12 translate-x-1/2 pointer-events-none opacity-50"></div>
+      <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-pink-100/30 rounded-full blur-[140px] -translate-x-1/2 pointer-events-none animate-pulse"></div>
 
-      {/* Subtle background glow */}
-      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-pink-100/40 rounded-full blur-[100px] -translate-x-1/2 pointer-events-none"></div>
-
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto  relative z-10">
         <AnimatedSection delay={0.1} direction="up">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="flex flex-col lg:flex-row gap-20 lg:gap-32 items-center">
 
-            {/* Left Content */}
-            <div className="lg:w-3/5">
-              <div className="mb-10">
-                <span className="font-mono text-[10px] tracking-[0.25em] capitalize text-pink-500 font-bold mb-6 block">
-                  Comprehensive Solutions
+            {/* Left Content Column */}
+            <div className="lg:w-[55%]">
+              <div className="max-w-xl">
+                <span className="inline-block px-5 py-2 rounded-full bg-white border border-slate-200 text-pink-500 font-bold text-[10px] tracking-[0.25em] uppercase mb-10 shadow-sm">
+                  Technology Leadership
                 </span>
-                <h2 className="text-4xl md:text-5xl font-black leading-tight text-slate-900 mb-8 tracking-tight capitalize">
-                  Full Stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">PHP Development</span> Solutions
+                <h2 className="text-5xl md:text-7xl font-black leading-[1.05] text-slate-900 mb-10 tracking-tighter">
+                  Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-rose-500">PHP Engineering</span> Solutions
                 </h2>
-                <div className="space-y-6 text-slate-500 text-lg leading-relaxed">
+
+                <div className="space-y-8 text-slate-500 text-lg md:text-xl leading-relaxed font-medium">
                   <p>
-                    TechnoScore can promise you results you've never experienced before. Did you know that almost all popular global brands use PHP? Due to its many advantages, this programming language has been continuously evolving since its launch.
+                    TechnoScore delivers digital architecture that powers global commerce. Did you know that almost all popular global brands leverage the scalability of PHP?
                   </p>
                   <p>
-                    As a trusted PHP web development company, we offer custom PHP development, CMS development, enterprise solutions, and more. With decades of experience, we've provided PHP services to various businesses, from small-scale startups to multinational brands.
+                    As a premier PHP development studio, we engineer bespoke CMS architectures, enterprise ecosystems, and resilient digital products.
                   </p>
-                  <p>
-                    Our dedicated developers have designed eCommerce stores, apps, and customized portals that support enterprises to scale fast and remain future-proof.
-                  </p>
+
+                  <div className="pt-6 grid grid-cols-2 gap-8">
+                    <div className="p-6 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50">
+                      <span className="block text-3xl font-black text-slate-900 mb-1">10+</span>
+                      <span className="block text-[10px] text-slate-400 font-bold uppercase tracking-widest">Years Expertise</span>
+                    </div>
+                    <div className="p-6 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50">
+                      <span className="block text-3xl font-black text-slate-900 mb-1">200+</span>
+                      <span className="block text-[10px] text-slate-400 font-bold uppercase tracking-widest">PHP Solutions</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Form */}
-            <div className="lg:w-2/5 w-full">
-
-              <ExpertsForm />
-
+            {/* Right Form Column */}
+            <div className="lg:w-[45%] w-full">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-pink-500/10 blur-3xl rounded-[3rem] opacity-50"></div>
+                <div className="relative">
+                  <ExpertsForm />
+                </div>
+              </div>
             </div>
 
           </div>

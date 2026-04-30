@@ -1,104 +1,123 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
-import { FiSmartphone, FiLayout, FiServer, FiCheckCircle } from 'react-icons/fi';
-import { FaLaravel, FaNodeJs, FaPhp, FaWordpress, FaArrowRight } from 'react-icons/fa';
+import { FiSmartphone, FiLayout, FiServer, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
+import { FaLaravel, FaNodeJs, FaPhp, FaWordpress } from 'react-icons/fa';
 
 const ServicesPage = () => {
   const servicesData = [
     {
       id: 1,
-      icon: <FiSmartphone className="text-3xl text-pink-500 group-hover:text-white transition-colors duration-300" />,
+      icon: <FiSmartphone />,
       title: 'Mobile App Development',
-      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
-      href: '/mobileApp'
+      description: 'Crafting native and cross-platform mobile experiences that engage and delight users.',
+      href: '/mobileApp',
+      color: 'from-[#FF1F8E] to-[#FF0055]'
     },
     {
       id: 2,
-      icon: <FiLayout className="text-3xl text-orange-400 group-hover:text-white transition-colors duration-300" />,
+      icon: <FiLayout />,
       title: 'UI/UX Designing',
-      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
-      href: '/uiux'
+      description: 'Designing intuitive, user-centric interfaces that blend aesthetic beauty with functional clarity.',
+      href: '/uiux',
+      color: 'from-[#FF0055] to-[#D400CC]'
     },
     {
       id: 3,
-      icon: <FiServer className="text-3xl text-pink-500 group-hover:text-white transition-colors duration-300" />,
+      icon: <FiServer />,
       title: 'Full Stack Development',
-      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
-      href: '/fullstack'
+      description: 'Building robust, scalable backends and dynamic frontends that power modern web applications.',
+      href: '/fullstack',
+      color: 'from-[#D400CC] to-[#8E2DE2]'
     },
     {
       id: 4,
-      icon: <FiCheckCircle className="text-3xl text-orange-400 group-hover:text-white transition-colors duration-300" />,
+      icon: <FiCheckCircle />,
       title: 'Software Testing',
-      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
-      href: '/softwaretesting'
+      description: 'Ensuring your digital products are bug-free and perform flawlessly across all platforms.',
+      href: '/softwaretesting',
+      color: 'from-[#8E2DE2] to-[#4A00E0]'
     },
     {
       id: 5,
-      icon: <FaLaravel className="text-3xl text-pink-500 group-hover:text-white transition-colors duration-300" />,
+      icon: <FaLaravel />,
       title: 'Laravel Development',
-      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
-      href: '/laravel'
+      description: 'Leveraging the power of the Laravel framework to build secure and feature-rich web applications.',
+      href: '/laravel',
+      color: 'from-[#FF1F8E] to-[#FF0055]'
     },
     {
       id: 6,
-      icon: <FaNodeJs className="text-3xl text-orange-400 group-hover:text-white transition-colors duration-300" />,
+      icon: <FaNodeJs />,
       title: 'Node.js Development',
-      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
-      href: '/nodejs'
+      description: 'Creating high-performance, real-time applications using event-driven Node.js architecture.',
+      href: '/nodejs',
+      color: 'from-[#FF0055] to-[#D400CC]'
     },
     {
       id: 7,
-      icon: <FaPhp className="text-3xl text-pink-500 group-hover:text-white transition-colors duration-300" />,
+      icon: <FaPhp />,
       title: 'PHP Development',
-      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
-      href: '/php'
+      description: 'Custom PHP solutions tailored to your unique business requirements and goals.',
+      href: '/php',
+      color: 'from-[#D400CC] to-[#8E2DE2]'
     },
     {
       id: 8,
-      icon: <FaWordpress className="text-3xl text-orange-400 group-hover:text-white transition-colors duration-300" />,
+      icon: <FaWordpress />,
       title: 'WordPress Website',
-      description: 'A brand is your company’s personality and promise to your customer that helps create a lasting feeling.',
-      href: '/wordpress'
+      description: 'Building flexible, easy-to-manage WordPress sites that empower your digital presence.',
+      href: '/wordpress',
+      color: 'from-[#8E2DE2] to-[#4A00E0]'
     }
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white relative z-10 px-6 font-roboto">
-      <div className="container mx-auto">
-        <div className="text-center mb-16 relative z-10">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-pink-500 font-bold text-[10px] tracking-widest capitalize mb-4 shadow-sm">
-            What We Offer
-          </span>
-          <h4 className="text-4xl md:text-5xl font-black text-slate-900">Our Services</h4>
+    <section className="py-20 md:py-24 bg-white relative z-10 px-6 font-roboto overflow-hidden">
+      {/* Background Ambience */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF1F8E]/5 rounded-full blur-[150px] pointer-events-none" />
+
+      <div className="container mx-auto relative z-10">
+        <div className="flex flex-col items-center text-center mb-20">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-10 h-[2px] bg-[#FF1F8E]"></div>
+            <span className="text-[11px] font-bold tracking-[0.3em] text-[#FF1F8E] uppercase">Service Spectrum</span>
+            <div className="w-10 h-[2px] bg-[#FF1F8E]"></div>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-none tracking-tighter">
+            Powerful <span className="text-[#FF1F8E]">Service</span>
+          </h2>
         </div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 relative z-10">
-          {servicesData.map(service => (
-            <div key={service.id} className="group relative bg-white border border-slate-100 rounded-3xl p-8 hover:border-pink-500/20 transition-all duration-500 shadow-xl hover:shadow-2xl flex flex-col items-start overflow-hidden hover:-translate-y-2">
-
-              {/* Subtle hover gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-orange-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-
-              <div className="w-16 h-16 flex-shrink-0 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-pink-600 group-hover:to-orange-500 group-hover:border-transparent transition-all duration-500 relative z-10 shadow-sm">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 md:gap-8">
+          {servicesData.map((service) => (
+            <div
+              key={service.id}
+              className="group bg-white border border-slate-100 p-8 rounded-[2rem] hover:border-[#FF1F8E]/20 transition-all duration-500 shadow-sm hover:shadow-xl flex flex-col h-full overflow-hidden"
+            >
+              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-white text-xl mb-8 shadow-lg group-hover:scale-110 transition-transform`}>
                 {service.icon}
               </div>
-              <h6 className="font-bold text-xl mb-4 text-slate-900 group-hover:text-pink-600 transition-colors duration-300 relative z-10">
+
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#FF1F8E] mb-4 transition-colors">
                 {service.title}
-              </h6>
-              <p className="text-slate-500 text-sm leading-relaxed mb-6 relative z-10 flex-grow">
+              </h3>
+
+              <p className="text-slate-500 text-sm leading-relaxed mb-8 flex-grow font-medium">
                 {service.description}
               </p>
-              <Link href={service.href} className="inline-flex items-center mt-auto gap-2 text-[10px] tracking-[0.2em] font-bold capitalize text-slate-400 group-hover:text-pink-500 transition-colors duration-300 relative z-10">
-                Learn more <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+
+              <Link href={service.href} className="inline-flex items-center gap-2 text-[10px] font-black tracking-widest uppercase text-slate-400 group-hover:text-[#FF1F8E] transition-colors">
+                Discover <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-16 relative z-10">
-          <Link href="/services" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-pink-600 to-orange-500 text-white rounded-xl font-bold tracking-widest capitalize text-xs hover:shadow-lg hover:shadow-pink-600/20 hover:-translate-y-1 transition-all duration-300 group">
-            View All Services <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+        <div className="mt-16 text-center">
+          <Link href="/services" className="inline-flex items-center gap-4 px-10 py-5 bg-slate-900 text-white rounded-full font-bold tracking-widest uppercase text-[10px] hover:bg-[#FF1F8E] transition-all duration-300 shadow-xl">
+            Explore All Services <FiArrowRight />
           </Link>
         </div>
       </div>
@@ -107,4 +126,3 @@ const ServicesPage = () => {
 };
 
 export default ServicesPage;
-

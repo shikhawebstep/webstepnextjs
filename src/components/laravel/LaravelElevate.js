@@ -33,7 +33,7 @@ const LaravelElevate = () => {
                     Hire Skilled <span className="text-red-600">Laravel Developers</span>
                   </h2>
                   <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                    Our Laravel developers are experts in building clean, elegant, and maintainable applications. We follow PSR standards and leverage Laravel's full power to deliver exceptional results.
+                    Our Laravel developers are experts in building clean, elegant, and maintainable applications. We follow PSR standards and leverage Laravel&apos;s full power to deliver exceptional results.
                   </p>
                 </div>
 

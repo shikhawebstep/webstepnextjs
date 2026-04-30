@@ -52,7 +52,7 @@ const BlogPosts = () => {
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
 
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto ">
         <AnimatedSection delay={0} direction="up" className="text-center mb-16">
           <span className="font-mono text-[10px] tracking-[0.25em] capitalize text-pink-500 font-bold mb-4 block">
             Latest Insights

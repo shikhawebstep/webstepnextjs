@@ -26,7 +26,7 @@ const FunelBanner = () => {
                     <div className="logo-group">
                         <Image src={logogroup} alt="" />
                     </div>
-                    <p>"Today You'll Get Access To The Complete FunnelMates Suite, Traffic Automation Software Tools & Our Beginner Friendly 10 Part Video Series (Inc. Templates & Resources) Responsible For Taking 1,000's Of Complete Affiliate Zero's To Legendary Affiliate Marketing Hero's"</p>
+                    <p>&quot;Today You&apos;ll Get Access To The Complete FunnelMates Suite, Traffic Automation Software Tools & Our Beginner Friendly 10 Part Video Series (Inc. Templates & Resources) Responsible For Taking 1,000&apos;s Of Complete Affiliate Zero&apos;s To Legendary Affiliate Marketing Hero&apos;s&quot;</p>
                 </div>
                 </div>
             </section>

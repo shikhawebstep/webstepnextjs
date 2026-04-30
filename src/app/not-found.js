@@ -51,7 +51,7 @@ export default function NotFound() {
           </h2>
 
           <p className="text-lg md:text-xl text-slate-500 font-light leading-relaxed max-w-xl mx-auto">
-            The page you're looking for might have been moved, deleted, or never existed in the first place. Don't worry, let's get you back on track.
+            The page you&apos;re looking for might have been moved, deleted, or never existed in the first place. Don&apos;t worry, let&apos;s get you back on track.
           </p>
 
           {/* CTA Button */}

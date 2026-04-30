@@ -27,7 +27,7 @@ const FullStackDev = () => {
                     Our full-stack development team brings together the best of both worlds—stunning frontend experiences and robust, high-performance backends. We specialize in building applications that are not only visually appealing but also highly functional and secure.
                   </p>
                   <p>
-                    Whether you're looking for a React-based frontend with a Node.js backend or a more traditional PHP stack, our experts have the skills to deliver a seamless digital product.
+                    Whether you&apos;re looking for a React-based frontend with a Node.js backend or a more traditional PHP stack, our experts have the skills to deliver a seamless digital product.
                   </p>
                   <p>
                     From ideation and UI/UX design to database architecture and cloud deployment, we handle the entire development lifecycle so you can focus on growing your business.

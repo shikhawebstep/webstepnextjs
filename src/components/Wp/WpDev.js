@@ -17,7 +17,7 @@ const WpDev = () => {
             <div className="lg:w-3/5">
               <div className="mb-10">
                 <span className="font-mono text-[10px] tracking-[0.25em] capitalize text-blue-500 font-bold mb-6 block">
-                  The World's Favorite CMS
+                  The World&apos;s Favorite CMS
                 </span>
                 <h2 className="text-4xl md:text-5xl font-black leading-tight text-slate-900 mb-8 tracking-tight capitalize">
                   Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">WordPress</span> Solutions
@@ -27,7 +27,7 @@ const WpDev = () => {
                     WordPress powers over 40% of the web, and for good reason. It offers unmatched flexibility, ease of use, and a massive ecosystem of plugins and themes.
                   </p>
                   <p>
-                    At Webstep Solutions, we don't just "install" WordPress. We build custom themes and plugins tailored to your specific needs, ensuring your site is fast, secure, and easy for your team to manage.
+                    At Webstep Solutions, we don&apos;t just &quot;install&quot; WordPress. We build custom themes and plugins tailored to your specific needs, ensuring your site is fast, secure, and easy for your team to manage.
                   </p>
                   <p>
                     From high-converting landing pages to complex multisite installations and headless WordPress architectures, our experts deliver solutions that help you stand out in a crowded digital landscape.

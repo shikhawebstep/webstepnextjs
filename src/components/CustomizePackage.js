@@ -129,7 +129,7 @@ export default function CustomizePackage() {
 
     return (
         <section className="py-20 text-slate-900 min-h-screen px-4 md:px-8 bg-slate-50">
-            <div className="container mx-auto max-w-7xl">
+            <div className="container mx-auto ">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-4 font-heading bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-orange-500">
                         Build Your Custom Package

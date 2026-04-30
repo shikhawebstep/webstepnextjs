@@ -2,7 +2,14 @@
 import React from "react";
 import { FaLock, FaPaperPlane } from "react-icons/fa";
 
-const ContactForm = () => {
+const ContactForm = ({ light = false }) => {
+    const inputClasses = light 
+        ? "w-full bg-white border border-slate-200 rounded-2xl py-4 px-6 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-[#FF1F8E] transition-all duration-300 shadow-sm"
+        : "w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-white placeholder:text-white/40 focus:outline-none focus:border-[#FF1F8E] transition-all duration-300 shadow-[0_0_15px_rgba(255,31,142,0.1)] focus:shadow-[0_0_20px_rgba(255,31,142,0.3)] backdrop-blur-md";
+
+    const labelClasses = light ? "text-slate-500" : "text-white/60";
+    const subTextClasses = light ? "text-slate-400" : "text-white/40";
+
     return (
         <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -13,7 +20,7 @@ const ContactForm = () => {
                         name="name"
                         placeholder="Your Full Name*"
                         required
-                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-6 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-pink-500 transition-all duration-300 shadow-sm"
+                        className={inputClasses}
                     />
                 </div>
                 <div className="group">
@@ -23,7 +30,7 @@ const ContactForm = () => {
                         name="phone"
                         placeholder="Phone Number*"
                         required
-                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-6 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-pink-500 transition-all duration-300 shadow-sm"
+                        className={inputClasses}
                     />
                 </div>
             </div>
@@ -36,7 +43,7 @@ const ContactForm = () => {
                         name="email"
                         placeholder="Email Address*"
                         required
-                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-6 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-pink-500 transition-all duration-300 shadow-sm"
+                        className={inputClasses}
                     />
                 </div>
                 <div className="group">
@@ -45,7 +52,7 @@ const ContactForm = () => {
                         id="location"
                         name="location"
                         placeholder="Location"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-6 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-pink-500 transition-all duration-300 shadow-sm"
+                        className={inputClasses}
                     />
                 </div>
             </div>
@@ -56,7 +63,7 @@ const ContactForm = () => {
                     id="Project"
                     placeholder="Project Details*"
                     required
-                    className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-6 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-pink-500 transition-all duration-300 min-h-[160px] resize-y shadow-sm"
+                    className={`${inputClasses} min-h-[160px] resize-y`}
                 ></textarea>
             </div>
 
@@ -69,26 +76,26 @@ const ContactForm = () => {
                                 id="privacy"
                                 name="privacy"
                                 required
-                                className="appearance-none w-5 h-5 border border-slate-300 rounded bg-slate-50 checked:bg-pink-500 checked:border-pink-500 transition-all cursor-pointer"
+                                className={`appearance-none w-5 h-5 border border-slate-200 rounded ${light ? 'bg-white' : 'bg-white/5'} checked:bg-[#FF1F8E] checked:border-[#FF1F8E] transition-all cursor-pointer`}
                             />
                             <svg className="absolute w-3 h-3 text-white pointer-events-none opacity-0 peer-checked:opacity-100" viewBox="0 0 14 10" fill="none">
                                 <path d="M1 5L4.5 8.5L13 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </div>
-                        <span className="text-sm text-slate-500 group-hover:text-slate-900 transition-colors">
-                            I agree to the <a href="#" className="text-pink-600 hover:text-pink-500 font-bold">Privacy Policy</a>
+                        <span className={`text-sm ${labelClasses} group-hover:opacity-100 transition-opacity`}>
+                            I agree to the <a href="#" className="text-[#FF1F8E] hover:underline font-bold">Privacy Policy</a>
                         </span>
                     </label>
 
-                    <div className="flex items-center gap-2 text-slate-400">
+                    <div className={`flex items-center gap-2 ${subTextClasses}`}>
                         <FaLock className="text-xs" />
-                        <span className="text-xs capitalize tracking-widest font-bold">We guarantee the protection of your data</span>
+                        <span className="text-[10px] uppercase tracking-widest font-bold">We guarantee the protection of your data</span>
                     </div>
                 </div>
 
                 <button
                     type="submit"
-                    className="group relative flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-pink-600 to-orange-500 rounded-2xl text-white font-bold tracking-[0.2em] capitalize overflow-hidden shadow-lg shadow-pink-600/20 hover:shadow-pink-600/40 transition-all duration-300"
+                    className="group relative flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-[#FF1F8E] to-[#FF0055] rounded-full text-white font-bold tracking-[0.2em] uppercase overflow-hidden shadow-[0_15px_35px_rgba(255,31,142,0.3)] hover:shadow-[0_20px_40px_rgba(255,31,142,0.4)] hover:-translate-y-1 transition-all duration-300"
                 >
                     <span className="relative z-10">Send Message</span>
                     <FaPaperPlane className="relative z-10 group-hover:translate-x-1 transition-transform" />
@@ -100,4 +107,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-

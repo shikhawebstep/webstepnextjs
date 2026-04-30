@@ -104,7 +104,7 @@ const OurTeam = () => {
                 <div className="col-full">
                     <div className="Latest">
                         <h1>Our Team</h1>
-                        <h2>It's time to create the Perfect Team</h2>
+                        <h2>It&apos;s time to create the Perfect Team</h2>
                     </div>
                     <div className="grid-container">
                         {teamMembers.map((member, index) => (

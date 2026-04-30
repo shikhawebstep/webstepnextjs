@@ -51,7 +51,7 @@ const Checkout = () => {
                             </div>
                         </div>
                         <div className="bg-pink timer-box">
-                            <h2><span>HURRY! Fast Action 20% Discount Automatically Applied</span>COUPON CODE "20OFF" Expires In:</h2>
+                            <h2><span>HURRY! Fast Action 20% Discount Automatically Applied</span>COUPON CODE &quot;20OFF&quot; Expires In:</h2>
                             <div className="timer">
                             <Countdown targetDate={targetDate} />
                             </div>

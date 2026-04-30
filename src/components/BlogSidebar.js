@@ -43,8 +43,8 @@ const BlogSidebar = () => {
                     <div className="follow-us-box">
                         <div className="comment-box">
                             <ul>
-                                <li>Editor's Picks<span>(20)</span></li>
-                                <li>Editor's Picks<span>(10)</span></li>
+                                <li>Editor&apos;s Picks<span>(20)</span></li>
+                                <li>Editor&apos;s Picks<span>(10)</span></li>
                             </ul>
                         </div>
                     </div>
